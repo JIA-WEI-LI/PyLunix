@@ -1,0 +1,77 @@
+# General Properties
+ToggleButtonBorderThemeThickness: "1px"
+ToggleButtonCheckedStateBackgroundSizing: "OuterBorderEdge"
+
+# region Color
+# Background
+ToggleButtonBackground: "ControlFillColorDefaultBrush"
+ToggleButtonBackgroundPointerOver: "ControlFillColorSecondaryBrush"
+ToggleButtonBackgroundPressed: "ControlFillColorTertiaryBrush"
+ToggleButtonBackgroundDisabled: "ControlFillColorDisabledBrush"
+
+# Foreground (Text)
+ToggleButtonForeground: "TextFillColorPrimaryBrush"
+ToggleButtonForegroundPointerOver: "TextFillColorPrimaryBrush"
+ToggleButtonForegroundPressed: "TextFillColorSecondaryBrush"
+ToggleButtonForegroundDisabled: "TextFillColorDisabledBrush"
+
+# Border
+ToggleButtonBorderBrush: "ControlElevationBorderBrush"
+ToggleButtonBorderBrushPointerOver: "ControlElevationBorderBrush"
+ToggleButtonBorderBrushPressed: "ControlStrokeColorDefaultBrush"
+ToggleButtonBorderBrushDisabled: "ControlStrokeColorDefaultBrush"
+
+# --- Checked State ---
+# Background
+ToggleButtonBackgroundChecked: "AccentFillColorDefaultBrush"
+ToggleButtonBackgroundCheckedPointerOver: "AccentFillColorSecondaryBrush"
+ToggleButtonBackgroundCheckedPressed: "AccentFillColorTertiaryBrush"
+ToggleButtonBackgroundCheckedDisabled: "AccentFillColorDisabledBrush"
+
+# Foreground (Text)
+ToggleButtonForegroundChecked: "TextOnAccentFillColorPrimaryBrush"
+ToggleButtonForegroundCheckedPointerOver: "TextOnAccentFillColorPrimaryBrush"
+ToggleButtonForegroundCheckedPressed: "TextOnAccentFillColorSecondaryBrush"
+# 注意: XAML源碼中為"TextOnAccentFillColorDisabled" (缺少Brush)
+ToggleButtonForegroundCheckedDisabled: "TextOnAccentFillColorDisabledBrush"
+
+# Border
+ToggleButtonBorderBrushChecked: "AccentControlElevationBorderBrush"
+ToggleButtonBorderBrushCheckedPointerOver: "AccentControlElevationBorderBrush"
+ToggleButtonBorderBrushCheckedPressed: "ControlFillColorTransparentBrush"
+ToggleButtonBorderBrushCheckedDisabled: "ControlFillColorTransparentBrush"
+
+# --- Indeterminate State (不確定狀態) ---
+# Background
+ToggleButtonBackgroundIndeterminate: "ControlFillColorDefaultBrush"
+ToggleButtonBackgroundIndeterminatePointerOver: "ControlFillColorSecondaryBrush"
+ToggleButtonBackgroundIndeterminatePressed: "ControlFillColorTertiaryBrush"
+ToggleButtonBackgroundIndeterminateDisabled: "ControlFillColorDisabledBrush"
+
+# Foreground (Text)
+ToggleButtonForegroundIndeterminate: "TextFillColorPrimaryBrush"
+ToggleButtonForegroundIndeterminatePointerOver: "TextFillColorPrimaryBrush"
+ToggleButtonForegroundIndeterminatePressed: "TextFillColorSecondaryBrush"
+ToggleButtonForegroundIndeterminateDisabled: "TextFillColorDisabledBrush"
+
+# Border
+ToggleButtonBorderBrushIndeterminate: "ControlElevationBorderBrush"
+ToggleButtonBorderBrushIndeterminatePointerOver: "ControlElevationBorderBrush"
+ToggleButtonBorderBrushIndeterminatePressed: "ControlStrokeColorDefaultBrush"
+ToggleButtonBorderBrushIndeterminateDisabled: "ControlStrokeColorDefaultBrush"
+
+# endregion
+
+# --- SolidColorBrush Definitions ---
+ToggleButtonBackgroundThemeBrush: "transparent"
+
+# region Thinckness
+ToggleButtonPadding: "5px 11px 6px 11px"
+ToggleButtonCornerRadius: "5px"
+# endregion
+
+# region Font
+FontFamily: "Segoe UI"
+FontWeight: "Normal"
+FontSize: "14px"
+# endregion

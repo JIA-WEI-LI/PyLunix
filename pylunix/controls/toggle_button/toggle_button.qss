@@ -1,0 +1,148 @@
+ToggleButton[class="ToggleButton"],
+ToggleButton[class="SegmentedButton"]  {
+    background-color: ToggleButtonBackground;
+    border: solid;
+    border-width: ToggleButtonBorderThemeThickness;
+    border-color: transparent;  /* NEED CHECKED */
+    border-bottom-left-radius: ToggleButtonCornerRadius;
+    border-bottom-right-radius: ToggleButtonCornerRadius;
+    border-top-left-radius: ToggleButtonCornerRadius;
+    border-top-right-radius: ToggleButtonCornerRadius;
+    color: ToggleButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: ToggleButtonPadding;
+    /* outline: none; */
+}
+ToggleButton[class="ToggleButton"]:hover,
+ToggleButton[class="SegmentedButton"]:hover,
+ToggleButton[class="TransparentToggleButton"]:hover {
+    background-color: ToggleButtonBackgroundPointerOver;
+    border-color: ToggleButtonBorderBrushPointerOver;
+    color: ToggleButtonForegroundPointerOver;
+}
+ToggleButton[class="ToggleButton"]:pressed,
+ToggleButton[class="SegmentedButton"]:pressed,
+ToggleButton[class="TransparentToggleButton"]:pressed {
+    background-color: ToggleButtonBackgroundPressed;
+    border-color: ToggleButtonBorderBrushPressed;
+    color: ToggleButtonForegroundPressed;
+}
+ToggleButton[class="ToggleButton"]:disabled,
+ToggleButton[class="SegmentedButton"]:disabled,
+ToggleButton[class="TransparentToggleButton"]:disabled {
+    background-color: ToggleButtonBackgroundDisabled;
+    border: solid;
+    border-width: ToggleButtonBorderThemeThickness;
+    border-color: ToggleButtonBorderBrushDisabled;
+    color: ToggleButtonForegroundDisabled;
+}
+
+ToggleButton[class="ToggleButton"]:checked,
+ToggleButton[class="SegmentedButton"]:checked,
+ToggleButton[class="TransparentToggleButton"]:checked {
+    background-color: ToggleButtonBackgroundChecked;
+    border-color: ToggleButtonBorderBrushChecked;
+    border-radius: ToggleButtonCornerRadius;
+    color: ToggleButtonForegroundChecked;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: ButtonPadding;
+}
+ToggleButton[class="ToggleButton"]:checked:hover,
+ToggleButton[class="SegmentedButton"]:checked:hover,
+ToggleButton[class="TransparentToggleButton"]:checked:hover {
+    background-color: ToggleButtonBackgroundCheckedPointerOver;
+    border-color: ToggleButtonBorderBrushCheckedPointerOver;
+    color: ToggleButtonForegroundCheckedPointerOver;
+}
+ToggleButton[class="ToggleButton"]:checked:pressed,
+ToggleButton[class="SegmentedButton"]:checked:pressed,
+ToggleButton[class="TransparentToggleButton"]:checked:pressed {
+    background-color: ToggleButtonBackgroundCheckedPressed;
+    border-color: ToggleButtonBorderBrushCheckedPressed;
+    color: ToggleButtonForegroundCheckedPressed;
+}
+ToggleButton[class="ToggleButton"]:checked:disabled,
+ToggleButton[class="SegmentedButton"]:checked:disabled,
+ToggleButton[class="TransparentToggleButton"]:checked:disabled {
+    background-color: ToggleButtonBackgroundCheckedDisabled;
+    border-color: ToggleButtonBorderBrushCheckedDisabled;
+    color: ToggleButtonForegroundCheckedDisabled;
+}
+
+ToggleButton[class="TransparentToggleButton"] {
+    background-color: ToggleButtonBackgroundThemeBrush;
+    border-radius: ToggleButtonCornerRadius;
+    color: ToggleButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: ToggleButtonPadding;
+}
+
+ToggleButton[position="bottom-left"],
+ToggleButton[position="bottom-left"]:checked {
+    border-bottom-left-radius: ToggleButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+ToggleButton[position="bottom-right"],
+ToggleButton[position="bottom-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: ToggleButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+ToggleButton[position="top-left"],
+ToggleButton[position="top-left"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ToggleButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+ToggleButton[position="top-right"],
+ToggleButton[position="top-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: ToggleButtonCornerRadius;
+}
+ToggleButton[position="left"],
+ToggleButton[position="left"]:checked {
+    border-bottom-left-radius: ToggleButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ToggleButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+ToggleButton[position="right"],
+ToggleButton[position="right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: ToggleButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: ToggleButtonCornerRadius;
+}
+ToggleButton[position="top"],
+ToggleButton[position="top"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ToggleButtonCornerRadius;
+    border-top-right-radius: ToggleButtonCornerRadius;
+}
+ToggleButton[position="bottom"],
+ToggleButton[position="bottom"]:checked {
+    border-bottom-left-radius: ToggleButtonCornerRadius;
+    border-bottom-right-radius: ToggleButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+ToggleButton[position="center"],
+ToggleButton[position="center"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
