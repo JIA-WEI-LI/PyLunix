@@ -1,0 +1,27 @@
+HyperlinkButton[class="HyperlinkButton"] {
+    background-color: HyperlinkButtonBackground;
+    border-color: HyperlinkButtonBorderBrush;
+    border-radius: 5px;
+    border-width: HyperlinkButtonBorderThemeThickness;
+    color: HyperlinkButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: HyperlinkButtonPadding;
+    outline: none;
+}
+HyperlinkButton[class="HyperlinkButton"]:hover {
+    background-color: HyperlinkButtonBackgroundPointerOver;
+    border-color: HyperlinkButtonBorderBrushPointerOver;
+    color: HyperlinkButtonForegroundPointerOver;
+}
+HyperlinkButton[class="HyperlinkButton"]:pressed {
+    background-color: HyperlinkButtonBackgroundPressed;
+    border-color: HyperlinkButtonBorderBrushPressed;
+    color: HyperlinkButtonForegroundPressed;
+}
+HyperlinkButton[class="HyperlinkButton"]:disabled {
+    background-color: HyperlinkButtonBackgroundDisabled;
+    border-color: HyperlinkButtonBorderBrushDisabled;
+    color: HyperlinkButtonForegroundDisabled;
+}

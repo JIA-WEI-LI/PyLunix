@@ -1,0 +1,31 @@
+#  region Color
+# Text
+HyperlinkButtonForeground: AccentTextFillColorPrimaryBrush
+HyperlinkButtonForegroundPointerOver: AccentTextFillColorSecondaryBrush
+HyperlinkButtonForegroundPressed: AccentTextFillColorTertiaryBrush
+HyperlinkButtonForegroundDisabled: AccentTextFillColorDisabledBrush
+
+# Background
+HyperlinkButtonBackground: SubtleFillColorTransparentBrush
+HyperlinkButtonBackgroundPointerOver: SubtleFillColorSecondaryBrush
+HyperlinkButtonBackgroundPressed: SubtleFillColorTertiaryBrush
+HyperlinkButtonBackgroundDisabled: SubtleFillColorDisabledBrush
+
+# Border
+HyperlinkButtonBorderBrush: SubtleFillColorTransparentBrush
+HyperlinkButtonBorderBrushPointerOver: SubtleFillColorTransparentBrush
+HyperlinkButtonBorderBrushPressed: SubtleFillColorTransparentBrush
+HyperlinkButtonBorderBrushDisabled: SubtleFillColorTransparentBrush
+
+HyperlinkButtonBorderThemeThickness: 1px""
+# endregion
+
+# region Thinckness
+HyperlinkButtonPadding: "5px 11px 6px 11px"
+# endregion
+
+# region Font
+FontFamily: "Segoe UI"
+FontWeight: "Normal"
+FontSize: "14px"
+# endregion
