@@ -1,0 +1,53 @@
+# region Color
+# Accent Button Background
+AccentButtonBackground: "AccentFillColorDefaultBrush"
+AccentButtonBackgroundPointerOver: "AccentFillColorSecondaryBrush"
+AccentButtonBackgroundPressed: "AccentFillColorTertiaryBrush"
+AccentButtonBackgroundDisabled: "AccentFillColorDisabledBrush"
+
+# Accent Button Text/Foreground
+AccentButtonForeground: "TextOnAccentFillColorPrimaryBrush"
+AccentButtonForegroundPointerOver: "TextOnAccentFillColorPrimaryBrush"
+AccentButtonForegroundPressed: "TextOnAccentFillColorSecondaryBrush"
+AccentButtonForegroundDisabled: "TextOnAccentFillColorDisabledBrush"
+
+# Accent Button Border
+AccentButtonBorderBrush: "AccentControlElevationBorderBrush"
+AccentButtonBorderBrushPointerOver: "AccentControlElevationBorderBrush"
+AccentButtonBorderBrushPressed: "ControlFillColorTransparentBrush"
+AccentButtonBorderBrushDisabled: "ControlFillColorTransparentBrush"
+
+# Standard Button Background
+ButtonBackground: "ControlFillColorDefaultBrush"
+ButtonBackgroundPointerOver: "ControlFillColorSecondaryBrush"
+ButtonBackgroundPressed: "ControlFillColorTertiaryBrush"
+ButtonBackgroundDisabled: "ControlFillColorDisabledBrush"
+
+# Standard Button Text/Foreground
+ButtonForeground: "TextFillColorPrimaryBrush"
+ButtonForegroundPointerOver: "TextFillColorPrimaryBrush"
+ButtonForegroundPressed: "TextFillColorSecondaryBrush"
+ButtonForegroundDisabled: "TextFillColorDisabledBrush"
+
+# Standard Button Border
+ButtonBorderBrush: "ControlElevationBorderBrush"
+ButtonBorderBrushPointerOver: "ControlElevationBorderBrush"
+ButtonBorderBrushPressed: "ControlStrokeColorDefaultBrush"
+ButtonBorderBrushDisabled: "ControlStrokeColorDefaultBrush"
+
+# Thickness
+ButtonBorderThemeThickness: "1px"
+
+# SolidColorBrush Definitions (Theme Brushes)
+ButtonBackgroundThemeBrush: "Transparent"
+
+# region Thinckness
+ButtonPadding: "5px 11px 6px 11px"
+ButtonCornerRadius: "5px"
+# endregion
+
+# region Font
+ButtonFontFamily: "Segoe UI"
+ButtonFontWeight: "Normal"
+ButtonFontSize: "14px"
+# endregion

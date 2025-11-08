@@ -1,0 +1,134 @@
+BaseButton[class="PushButton"]{
+    background-color: ButtonBackground;
+    border: solid;
+    border-width: ButtonBorderThemeThickness;
+    border-color: ButtonBorderBrush;
+    border-radius: ButtonCornerRadius;
+    color: ButtonForeground;
+    font-family: ButtonFontFamily;
+    font-size: ButtonFontSize;
+    font-weight: ButtonFontWeight;
+    padding: ButtonPadding;
+    /* outline: none; */
+}
+BaseButton[class="PushButton"]:hover,
+BaseButton[class="TransparentPushButton"]:hover{
+    background-color: ButtonBackgroundPointerOver;
+    border-color: ButtonBorderBrushPointerOver;
+    color: ButtonForegroundPointerOver;
+}
+BaseButton[class="PushButton"]:pressed,
+BaseButton[class="TransparentPushButton"]:pressed{
+    background-color: ButtonBackgroundPressed;
+    border-color: ButtonBorderBrushPressed;
+    color: ButtonForegroundPressed;
+}
+BaseButton[class="PushButton"]:disabled,
+BaseButton[class="TransparentPushButton"]:disabled{
+    background-color: ButtonBackgroundDisabled;
+    border: solid;
+    border-width: ButtonBorderThemeThickness;
+    border-color: ButtonBorderBrushDisabled;
+    color: ButtonForegroundDisabled;
+}
+
+BaseButton[class="PrimaryButton"]{
+    background-color: AccentButtonBackground;
+    border-color: AccentButtonBorderBrush;
+    border-radius: ButtonCornerRadius;
+    color: AccentButtonForeground;
+    font-family: ButtonFontFamily;
+    font-size: ButtonFontSize;
+    font-weight: ButtonFontWeight;
+    padding: ButtonPadding;
+}
+BaseButton[class="PrimaryButton"]:hover{
+    background-color: AccentButtonBackgroundPointerOver;
+    border-color: AccentButtonBorderBrushPointerOver;
+    color: AccentButtonForegroundPointerOver;
+}
+BaseButton[class="PrimaryButton"]:pressed{
+    background-color: AccentButtonBackgroundPressed;
+    border-color: AccentButtonBorderBrushPressed;
+    color: AccentButtonForegroundPressed;
+}
+BaseButton[class="PrimaryButton"]:disabled,
+BaseButton[class="SegmentedButton"]:checked:disabled {
+    background-color: AccentButtonBackgroundDisabled;
+    border-color: AccentButtonBorderBrushDisabled;
+    color: AccentButtonForegroundDisabled;
+}
+
+BaseButton[class="TransparentPushButton"]{
+    background-color: ButtonBackgroundThemeBrush;
+    border-radius: ButtonCornerRadius;
+    color: ButtonForeground;
+    font-family: ButtonFontFamily;
+    font-size: ButtonFontSize;
+    font-weight: ButtonFontWeight;
+    padding: ButtonPadding;
+}
+
+BaseButton[position="bottom-left"],
+BaseButton[position="bottom-left"]:checked {
+    border-bottom-left-radius: ButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="bottom-right"],
+BaseButton[position="bottom-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: ButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="top-left"],
+BaseButton[position="top-left"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="top-right"],
+BaseButton[position="top-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: ButtonCornerRadius;
+}
+BaseButton[position="left"],
+BaseButton[position="left"]:checked {
+    border-bottom-left-radius: ButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="right"],
+BaseButton[position="right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: ButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: ButtonCornerRadius;
+}
+BaseButton[position="top"],
+BaseButton[position="top"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ButtonCornerRadius;
+    border-top-right-radius: ButtonCornerRadius;
+}
+BaseButton[position="bottom"],
+BaseButton[position="bottom"]:checked {
+    border-bottom-left-radius: ButtonCornerRadius;
+    border-bottom-right-radius: ButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="center"],
+BaseButton[position="center"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
