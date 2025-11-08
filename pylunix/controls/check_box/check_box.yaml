@@ -1,0 +1,115 @@
+# region Color
+
+# CheckBox Foreground
+CheckBoxForegroundUnchecked: "TextFillColorPrimaryBrush"
+CheckBoxForegroundUncheckedPointerOver: "TextFillColorPrimaryBrush"
+CheckBoxForegroundUncheckedPressed: "TextFillColorPrimaryBrush"
+CheckBoxForegroundUncheckedDisabled: "TextFillColorDisabledBrush"
+
+CheckBoxForegroundChecked: "TextFillColorPrimaryBrush"
+CheckBoxForegroundCheckedPointerOver: "TextFillColorPrimaryBrush"
+CheckBoxForegroundCheckedPressed: "TextFillColorPrimaryBrush"
+CheckBoxForegroundCheckedDisabled: "TextFillColorDisabledBrush"
+
+CheckBoxForegroundIndeterminate: "TextFillColorPrimaryBrush"
+CheckBoxForegroundIndeterminatePointerOver: "TextFillColorPrimaryBrush"
+CheckBoxForegroundIndeterminatePressed: "TextFillColorPrimaryBrush"
+CheckBoxForegroundIndeterminateDisabled: "TextFillColorDisabledBrush"
+
+# CheckBox Background
+CheckBoxBackgroundUnchecked: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundUncheckedPointerOver: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundUncheckedPressed: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundUncheckedDisabled: "SubtleFillColorTransparentBrush"
+
+CheckBoxBackgroundChecked: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundCheckedPointerOver: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundCheckedPressed: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundCheckedDisabled: "SubtleFillColorTransparentBrush"
+
+CheckBoxBackgroundIndeterminate: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundIndeterminatePointerOver: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundIndeterminatePressed: "SubtleFillColorTransparentBrush"
+CheckBoxBackgroundIndeterminateDisabled: "SubtleFillColorTransparentBrush"
+
+# CheckBox Border Brush
+CheckBoxBorderBrushUnchecked: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushUncheckedPointerOver: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushUncheckedPressed: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushUncheckedDisabled: "SubtleFillColorTransparentBrush"
+
+CheckBoxBorderBrushChecked: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushCheckedPointerOver: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushCheckedPressed: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushCheckedDisabled: "SubtleFillColorTransparentBrush"
+
+CheckBoxBorderBrushIndeterminate: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushIndeterminatePointerOver: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushIndeterminatePressed: "SubtleFillColorTransparentBrush"
+CheckBoxBorderBrushIndeterminateDisabled: "SubtleFillColorTransparentBrush"
+
+# CheckBox Check Background Stroke
+CheckBoxCheckBackgroundStrokeUnchecked: "ControlStrongStrokeColorDefaultBrush"
+CheckBoxCheckBackgroundStrokeUncheckedPointerOver: "ControlStrongStrokeColorDefaultBrush"
+CheckBoxCheckBackgroundStrokeUncheckedPressed: "ControlStrongStrokeColorDisabledBrush"
+CheckBoxCheckBackgroundStrokeUncheckedDisabled: "ControlStrongStrokeColorDisabledBrush"
+
+CheckBoxCheckBackgroundStrokeChecked: "AccentFillColorDefaultBrush"
+CheckBoxCheckBackgroundStrokeCheckedPointerOver: "AccentFillColorSecondaryBrush"
+CheckBoxCheckBackgroundStrokeCheckedPressed: "AccentFillColorTertiaryBrush"
+CheckBoxCheckBackgroundStrokeCheckedDisabled: "ControlStrongStrokeColorDisabledBrush"
+
+CheckBoxCheckBackgroundStrokeIndeterminate: "AccentFillColorDefaultBrush"
+CheckBoxCheckBackgroundStrokeIndeterminatePointerOver: "AccentFillColorSecondaryBrush"
+CheckBoxCheckBackgroundStrokeIndeterminatePressed: "AccentFillColorTertiaryBrush"
+CheckBoxCheckBackgroundStrokeIndeterminateDisabled: "ControlStrongStrokeColorDisabledBrush"
+
+# CheckBox Check Background Fill
+CheckBoxCheckBackgroundFillUnchecked: "ControlAltFillColorSecondaryBrush"
+CheckBoxCheckBackgroundFillUncheckedPointerOver: "ControlAltFillColorTertiaryBrush"
+CheckBoxCheckBackgroundFillUncheckedPressed: "ControlAltFillColorQuarternaryBrush"
+CheckBoxCheckBackgroundFillUncheckedDisabled: "ControlAltFillColorDisabledBrush"
+
+CheckBoxCheckBackgroundFillChecked: "AccentFillColorDefaultBrush"
+CheckBoxCheckBackgroundFillCheckedPointerOver: "AccentFillColorSecondaryBrush"
+CheckBoxCheckBackgroundFillCheckedPressed: "AccentFillColorTertiaryBrush"
+CheckBoxCheckBackgroundFillCheckedDisabled: "AccentFillColorDisabledBrush"
+
+CheckBoxCheckBackgroundFillIndeterminate: "AccentFillColorDefaultBrush"
+CheckBoxCheckBackgroundFillIndeterminatePointerOver: "AccentFillColorSecondaryBrush"
+CheckBoxCheckBackgroundFillIndeterminatePressed: "AccentFillColorTertiaryBrush"
+CheckBoxCheckBackgroundFillIndeterminateDisabled: "AccentFillColorDisabledBrush"
+
+# CheckBox Check Glyph
+CheckBoxCheckGlyphForegroundUnchecked: "TextOnAccentFillColorPrimaryBrush"
+CheckBoxCheckGlyphForegroundUncheckedPointerOver: "TextOnAccentFillColorPrimaryBrush"
+CheckBoxCheckGlyphForegroundUncheckedPressed: "TextOnAccentFillColorPrimaryBrush"
+CheckBoxCheckGlyphForegroundUncheckedDisabled: "TextOnAccentFillColorDisabledBrush"
+
+CheckBoxCheckGlyphForegroundChecked: "TextOnAccentFillColorPrimaryBrush"
+CheckBoxCheckGlyphForegroundCheckedPointerOver: "TextOnAccentFillColorPrimaryBrush"
+CheckBoxCheckGlyphForegroundCheckedPressed: "TextOnAccentFillColorSecondaryBrush"
+CheckBoxCheckGlyphForegroundCheckedDisabled: "TextOnAccentFillColorDisabledBrush"
+
+CheckBoxCheckGlyphForegroundIndeterminate: "TextOnAccentFillColorPrimaryBrush"
+CheckBoxCheckGlyphForegroundIndeterminatePointerOver: "TextOnAccentFillColorPrimaryBrush"
+CheckBoxCheckGlyphForegroundIndeterminatePressed: "TextOnAccentFillColorSecondaryBrush"
+CheckBoxCheckGlyphForegroundIndeterminateDisabled: "TextOnAccentFillColorDisabledBrush"
+
+# region Color / Size / Glyph / Style keys (CheckBox)
+CheckBoxBorderThickness: "1px"
+CheckBoxSize: "20px"
+CheckBoxGlyphSize: "12"
+CheckBoxHeight: "32px"
+CheckBoxMinWidth: "120px"
+CheckBoxPadding: "8px 5px 0px 0px"
+
+# Glyphs (use the same glyphs defined in XAML)
+CheckBoxCheckedGlyph: "\uE73E"
+CheckBoxIndeterminateGlyph: "\uE9AE"
+
+# region Font
+FontFamily: "Segoe UI"
+FontWeight: "Normal"
+FontSize: "14px"
+# endregion

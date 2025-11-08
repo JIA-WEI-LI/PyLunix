@@ -1,0 +1,59 @@
+CheckBox[class="CheckBox"] {
+    background-color: CheckBoxBackgroundUnchecked;
+    border-color: CheckBoxBorderBrushUnchecked;
+    border-width: CheckBoxBorderThickness;
+    color: CheckBoxForegroundUnchecked;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: CheckBoxPadding;
+    /* spacing: 8px; */
+    min-width: CheckBoxMinWidth;
+    min-height: CheckBoxHeight;
+    outline: none;
+    margin-left: 1px;
+}
+CheckBox[class="CheckBox"]:hover{
+    background-color: CheckBoxBackgroundUncheckedPointerOver;
+    border: CheckBoxBorderBrushUncheckedPointerOver;
+    color: CheckBoxForegroundUncheckedPointerOver;
+}
+CheckBox[class="CheckBox"]:pressed{
+    background-color: CheckBoxBackgroundUncheckedPressed;
+    border: CheckBoxBorderBrushUncheckedPressed;
+    color: CheckBoxForegroundUncheckedPressed;
+}
+CheckBox[class="CheckBox"]:disabled{
+    background-color: CheckBoxBackgroundUncheckedDisabled;
+    border: CheckBoxBorderBrushUncheckedDisabled;
+    color: CheckBoxForegroundUncheckedDisabled;
+}
+CheckBox[class="CheckBox"]:checked {
+    background-color: CheckBoxBackgroundChecked;
+    border: CheckBoxBorderBrushChecked;
+    color: CheckBoxForegroundChecked;
+}
+CheckBox[class="CheckBox"]:checked:hover {
+    background-color: CheckBoxBackgroundCheckedPointerOver;
+    border: CheckBoxBorderBrushCheckedPointerOver;
+    color: CheckBoxForegroundCheckedPointerOver;
+}
+CheckBox[class="CheckBox"]:checked:pressed {
+    background-color: CheckBoxBackgroundCheckedPressed;
+    border: CheckBoxBorderBrushCheckedPressed;
+    color: CheckBoxForegroundCheckedPressed;
+}
+CheckBox[class="CheckBox"]:checked:disabled {
+    background-color: CheckBoxBackgroundCheckedDisabled;
+    border: CheckBoxBorderBrushCheckedDisabled;
+    color: CheckBoxForegroundCheckedDisabled;
+}
+
+
+CheckBox::indicator {
+    width: CheckBoxSize;
+    height: CheckBoxSize;
+    border-radius: 5px;
+    border: CheckBoxBorderThickness solid transparent;
+    background-color: CheckBoxCheckBackgroundStrokeUnchecked;
+}
