@@ -13,6 +13,7 @@ class PyLunixStyleSheet(Enum):
         return obj
     
     BUTTON = "button", "controls"
+    REPEAT_BUTTON = "repeat_button", "controls"
     TOGGLE_BUTTON = "toggle_button", "controls"
     TOOL_BUTTON = "tool_button", "controls"
     HYPERLINK_BUTTON = "hyperlink_button", "controls"

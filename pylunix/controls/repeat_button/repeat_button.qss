@@ -1,0 +1,96 @@
+BaseButton[class=RepeatButton]{
+    background-color: RepeatButtonBackground;
+    border: solid;
+    border-width: RepeatButtonBorderThemeThickness;
+    border-color: RepeatButtonBorderBrush;
+    border-bottom-left-radius: RepeatButtonCornerRadius;
+    border-bottom-right-radius: RepeatButtonCornerRadius;
+    border-top-left-radius: RepeatButtonCornerRadius;
+    border-top-right-radius: RepeatButtonCornerRadius;
+    color: RepeatButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: RepeatButtonPadding;
+    /* outline: none; */
+}
+BaseButton[class=RepeatButton]:hover {
+    background-color: RepeatButtonBackgroundPointerOver;
+    color: RepeatButtonForegroundPointerOver;
+}
+BaseButton[class=RepeatButton]:pressed {
+    background-color: RepeatButtonBackgroundPressed;
+    border-color: RepeatButtonBorderBrushPressed;
+    color: RepeatButtonForegroundPressed;
+}
+BaseButton[class=RepeatButton]:disabled {
+    background-color: RepeatButtonBackgroundDisabled;
+    border: solid;
+    border-width: RepeatButtonBorderThemeThickness;
+    border-color: RepeatButtonBorderBrushDisabled;
+    color: RepeatButtonForegroundDisabled;
+}
+
+BaseButton[position="bottom-left"],
+BaseButton[position="bottom-left"]:checked {
+    border-bottom-left-radius: RepeatButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="bottom-right"],
+BaseButton[position="bottom-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius:RepeatButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="top-left"],
+BaseButton[position="top-left"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: RepeatButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="top-right"],
+BaseButton[position="top-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: RepeatButtonCornerRadius;
+}
+BaseButton[position="left"],
+BaseButton[position="left"]:checked {
+    border-bottom-left-radius: RepeatButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: RepeatButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="right"],
+BaseButton[position="right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: RepeatButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: RepeatButtonCornerRadius;
+}
+BaseButton[position="top"],
+BaseButton[position="top"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: RepeatButtonCornerRadius;
+    border-top-right-radius: RepeatButtonCornerRadius;
+}
+BaseButton[position="bottom"],
+BaseButton[position="bottom"]:checked {
+    border-bottom-left-radius: RepeatButtonCornerRadius;
+    border-bottom-right-radius: RepeatButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+BaseButton[position="center"],
+BaseButton[position="center"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}

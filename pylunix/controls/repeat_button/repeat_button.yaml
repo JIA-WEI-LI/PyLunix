@@ -1,0 +1,32 @@
+RepeatButtonBorderThemeThickness: "1px"
+
+# region Color
+# Background
+RepeatButtonBackground: ControlFillColorDefaultBrush
+RepeatButtonBackgroundPointerOver: ControlFillColorSecondaryBrush
+RepeatButtonBackgroundPressed: ControlFillColorTertiaryBrush
+RepeatButtonBackgroundDisabled: ControlFillColorDisabledBrush
+
+# Foreground (Text)
+RepeatButtonForeground: TextFillColorPrimaryBrush
+RepeatButtonForegroundPointerOver: TextFillColorPrimaryBrush
+RepeatButtonForegroundPressed: TextFillColorSecondaryBrush
+RepeatButtonForegroundDisabled: TextFillColorDisabledBrush
+
+# Border
+RepeatButtonBorderBrush: ControlElevationBorderBrush
+RepeatButtonBorderBrushPointerOver: ControlElevationBorderBrush
+RepeatButtonBorderBrushPressed: ControlStrokeColorDefaultBrush
+RepeatButtonBorderBrushDisabled: ControlStrokeColorDefaultBrush
+# endregion
+
+# region Thinckness
+RepeatButtonPadding: "5px 11px 6px 11px"
+RepeatButtonCornerRadius: "5px"
+# endregion
+
+# region Font
+FontFamily: "Segoe UI"
+FontWeight: "Normal"
+FontSize: "14px"
+# endregion
