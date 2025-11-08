@@ -1,0 +1,55 @@
+# region Color
+# Accent Button Background
+AccentToolButtonBackground: "AccentFillColorDefaultBrush"
+AccentToolButtonBackgroundPointerOver: "AccentFillColorSecondaryBrush"
+AccentToolButtonBackgroundPressed: "AccentFillColorTertiaryBrush"
+AccentToolButtonBackgroundDisabled: "AccentFillColorDisabledBrush"
+
+# Accent Button Text
+AccentToolButtonForeground: "TextOnAccentFillColorPrimaryBrush"
+AccentToolButtonForegroundPointerOver: "TextOnAccentFillColorPrimaryBrush"
+AccentToolButtonForegroundPressed: "TextOnAccentFillColorSecondaryBrush"
+AccentToolButtonForegroundDisabled: "TextOnAccentFillColorDisabledBrush"
+
+# Accent Button Border
+AccentToolButtonBorderBrush: "AccentControlElevationBorderBrush"
+AccentToolButtonBorderBrushPointerOver: "AccentControlElevationBorderBrush"
+AccentToolButtonBorderBrushPressed: "ControlFillColorTransparentBrush"
+AccentToolButtonBorderBrushDisabled: "ControlFillColorTransparentBrush"
+ToolButtonBorderThemeThickness: "1px"
+
+# Button Background
+ToolButtonBackground: "ControlFillColorDefaultBrush"
+ToolButtonBackgroundPointerOver: "ControlFillColorSecondaryBrush"
+ToolButtonBackgroundPressed: "ControlFillColorTertiaryBrush"
+ToolButtonBackgroundDisabled: "ControlFillColorDisabledBrush"
+
+# Button Text
+ToolButtonForeground: "TextFillColorPrimaryBrush"
+ToolButtonForegroundPointerOver: "TextFillColorPrimaryBrush"
+ToolButtonForegroundPressed: "TextFillColorSecondaryBrush"
+ToolButtonForegroundDisabled: "TextFillColorDisabledBrush"
+
+# Button Border
+ToolButtonBorderBrush: "ControlElevationBorderBrush"
+ToolButtonBorderBrushPointerOver: "ControlElevationBorderBrush"
+ToolButtonBorderBrushPressed: "ControlStrokeColorDefaultBrush"
+ToolButtonBorderBrushDisabled: "ControlStrokeColorDefaultBrush"
+ToolButtonBackgroundThemeBrush: "transparent"
+
+# Border and Forground Colors
+ToolButtonDisabledBackgroundThemeBrush: "transparent"
+
+# region Thinckness
+
+ToolButtonPadding: "5px 11px 6px 11px"
+
+ToolButtonCornerRadius: "5px"
+
+# endregion
+
+# region Font
+FontFamily: "Segoe UI"
+FontWeight: "Normal"
+FontSize: "14px"
+# endregion

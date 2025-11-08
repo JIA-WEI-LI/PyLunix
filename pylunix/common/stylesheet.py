@@ -14,6 +14,7 @@ class PyLunixStyleSheet(Enum):
     
     BUTTON = "button", "controls"
     TOGGLE_BUTTON = "toggle_button", "controls"
+    TOOL_BUTTON = "tool_button", "controls"
     HYPERLINK_BUTTON = "hyperlink_button", "controls"
 
     def apply(self, widget, register=True):

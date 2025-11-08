@@ -1,0 +1,209 @@
+ToolButton[class~="ToolButton"],
+ToolButton[class~="ToggleToolButton"] {
+    background-color: ToolButtonBackground;
+    border: solid;
+    border-width: ToolButtonBorderThemeThickness;
+    border-color: ToolButtonBorderBrush;
+    border-radius: ToolButtonCornerRadius;
+    color: ToolButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: ToolButtonPadding;
+}
+
+ToolButton[class~="ToolButton"]:hover,
+ToolButton[class~="ToggleToolButton"]:hover {
+    background-color: ToolButtonBackgroundPointerOver;
+    border-color: ToolButtonBorderBrush;
+    color: ToolButtonForegroundPointerOver;
+}
+ToolButton[class~="ToolButton"]:pressed,
+ToolButton[class~="ToggleToolButton"]:pressed {
+    background-color: ToolButtonBackgroundPressed;
+    border-color: ToolButtonBorderBrushPressed;
+    color: ToolButtonForegroundPressed;
+}
+ToolButton[class~="ToolButton"]:disabled,
+ToolButton[class~="ToggleToolButton"]:disabled {
+    background-color: ToolButtonBackgroundDisabled;
+    border: ToolButtonBorderBrushDisabled;
+    border-color: ToolButtonBorderBrushDisabled;
+    color: ToolButtonForegroundDisabled;
+}
+
+ToolButton[class~="TransparentToolButton"]:hover,
+ToolButton[class~="TransparentToggleToolButton"]:hover {
+    background-color: ToolButtonBackgroundPointerOver;
+    color: ToolButtonForegroundPointerOver;
+    border-width: 0px;
+}
+ToolButton[class~="TransparentToolButton"]:pressed,
+ToolButton[class~="TransparentToggleToolButton"]:pressed {
+    background-color: ToolButtonBackgroundPressed;
+    border-width: 0px;
+    border-color: transparent;
+    color: ToolButtonForegroundPressed;
+}
+ToolButton[class~="TransparentToolButton"]:disabled,
+ToolButton[class~="TransparentToggleToolButton"]:disabled {
+    background-color: ToolButtonBackgroundDisabled;
+    border-width: 0px;
+    border-color: transparent;
+    color: ToolButtonForegroundDisabled;
+}
+
+ToolButton[class~="PrimaryButton"],
+ToolButton[class~="PrimaryToolButton"],
+ToolButton[class~="ToggleToolButton"]:checked,
+ToolButton[class~="TransparentToggleToolButton"]:checked {
+    background-color: AccentToolButtonBackground;
+    border: solid;
+    border-radius: ToolButtonCornerRadius;
+    border-width: ToolButtonBorderThemeThickness;
+    border-color: transparent;
+    color: AccentToolButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: ToolButtonPadding;
+}
+
+/* Primary/Checked 狀態 (Hover, Pressed, Disabled) */
+ToolButton[class~="PrimaryButton"]:hover,
+ToolButton[class~="PrimaryToolButton"]:hover,
+ToolButton[class~="ToggleToolButton"]:checked:hover{
+    background-color: AccentToolButtonBackgroundPointerOver;
+    color: AccentToolButtonForegroundPointerOver;
+}
+ToolButton[class~="PrimaryButton"]:pressed,
+ToolButton[class~="PrimaryToolButton"]:pressed,
+ToolButton[class~="ToggleToolButton"]:checked:pressed {
+    background-color: AccentToolButtonBackgroundPressed;
+    border-color: AccentToolButtonBorderBrushPressed;
+    color: AccentToolButtonForegroundPressed;
+}
+ToolButton[class~="PrimaryButton"]:disabled,
+ToolButton[class~="PrimaryToolButton"]:disabled,
+ToolButton[class~="ToggleToolButton"]:checked:disabled {
+    background-color: AccentToolButtonBackgroundDisabled;
+    border-color: AccentToolButtonBorderBrushDisabled;
+    color: AccentToolButtonForegroundDisabled;
+}
+
+ToolButton[class~="TransparentToggleToolButton"]:checked {
+    background-color: AccentToolButtonBackground;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-radius: ToolButtonCornerRadius;
+    color: AccentToolButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: ToolButtonPadding;
+}
+ToolButton[class~="TransparentToggleToolButton"]:checked:hover {
+    background-color: AccentToolButtonBackgroundPointerOver;
+    color: AccentToolButtonForegroundPointerOver;
+    border-width: 0px;
+}
+ToolButton[class~="TransparentToggleToolButton"]:checked:pressed {
+    background-color: AccentToolButtonBackgroundPressed;
+    border-width: 0px;
+    border-color: transparent;
+    color: AccentToolButtonForegroundPressed;
+}
+ToolButton[class~="TransparentToggleToolButton"]:checked:disabled {
+    background-color: AccentToolButtonBackgroundDisabled;
+    border-width: 0px;
+    border-color: transparent;
+    color: AccentToolButtonForegroundDisabled;
+}
+
+ToolButton[class~="TransparentToolButton"],
+ToolButton[class~="TransparentToggleToolButton"] {
+    background-color: ToolButtonBackgroundThemeBrush;
+    
+    border: none;
+    border-width: ToolButtonBorderThemeThickness;
+    border-color: rgba(255, 255, 255, 0.05);
+    border-radius: ToolButtonCornerRadius;
+    color: ToolButtonForeground;
+    font-family: FontFamily;
+    font-size: FontSize;
+    font-weight: FontWeight;
+    padding: ToolButtonPadding;
+}
+
+ToolButton[position="bottom-left"],
+ToolButton[position="bottom-left"]:checked {
+    border-bottom-left-radius: ToolButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+ToolButton[position="bottom-right"],
+ToolButton[position="bottom-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: ToolButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+/* 頂部左/右 */
+ToolButton[position="top-left"],
+ToolButton[position="top-left"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ToolButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+ToolButton[position="top-right"],
+ToolButton[position="top-right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: ToolButtonCornerRadius;
+}
+
+/* 左/右側 */
+ToolButton[position="left"],
+ToolButton[position="left"]:checked {
+    border-bottom-left-radius: ToolButtonCornerRadius;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ToolButtonCornerRadius;
+    border-top-right-radius: 0px;
+}
+ToolButton[position="right"],
+ToolButton[position="right"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: ToolButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: ToolButtonCornerRadius;
+}
+
+/* 頂部/底部 (一整行或一整列) */
+ToolButton[position="top"],
+ToolButton[position="top"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: ToolButtonCornerRadius;
+    border-top-right-radius: ToolButtonCornerRadius;
+}
+ToolButton[position="bottom"],
+ToolButton[position="bottom"]:checked {
+    border-bottom-left-radius: ToolButtonCornerRadius;
+    border-bottom-right-radius: ToolButtonCornerRadius;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+/* 中間 (無圓角) */
+ToolButton[position="center"],
+ToolButton[position="center"]:checked {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
