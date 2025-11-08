@@ -1,6 +1,6 @@
 # PyLunix
 
-[![Version](https://img.shields.io/badge/version-0.0.2-forestgreen)](#)
+[![Version](https://img.shields.io/badge/version-0.1.0-forestgreen)](#)
 [![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](#)
 [![PyQt5](https://img.shields.io/badge/PyQt5-5.15.11-blue)](#)
 
@@ -17,8 +17,79 @@ PyLunix is designed to provide developers with a lightweight and easily integrat
 
 * **WinUI 3 Design Adoption:** The core design strictly adheres to the visual specifications of WinUI 3 (Windows App SDK), providing a familiar, modern interface aesthetic.
 * **PyQt5 Implementation:** Built upon the powerful, cross-platform capabilities of PyQt5, ensuring stable operation of widgets across various operating systems.
+* **Core Component Set (v0.1.0):** The library now provides a foundational set of **seven core interactive widgets** including `Buttons`, `Check Boxes`, `Toggle Buttons`, and `Tool Buttons`, ready for immediate use.
+* **Simple API Access:** All components are easily accessible through a direct import from the top-level package (`from pylunix import *`), simplifying integration.
 * **Custom and Extensible:** All components are custom-implemented, allowing developers deep customization and extension to meet specific application requirements.
-* **Gradual Updates and Optimization:** The project is currently in a phase of slow, continuous updates. We will progressively add new UI components and optimize the performance and visual fidelity of existing ones.
+---
+
+## Installation and Quick Start
+
+### Installation
+Currently, the project is not distributed via PyPI. You must clone the repository and install dependencies manually.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/JIA-WEI-LI/PyLunix.git](https://github.com/JIA-WEI-LI/PyLunix.git)
+    cd PyLunix
+    ```
+2.  **Install dependencies:**
+    ```bash
+    # Assuming you are using pip and a virtual environment
+    pip install PyQt5
+    ```
+
+### Usage Example
+You can now import the core widgets directly:
+
+```python
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout
+from pylunix import PushButton # or just use *
+
+if __name__ == '__main__':
+    app = QApplication([])
+    window = QWidget()
+    layout = QVBoxLayout(window)
+    
+    # Example of using a newly available widget
+    my_button = PushButton("Click Me")
+    layout.addWidget(my_button)
+    
+    window.setWindowTitle("PyLunix Demo")
+    window.show()
+    app.exec_()
+```
+
+## Component Status & Roadmap
+
+This section tracks the implementation progress of core UI components based on the WinUI 3 design specification.
+
+### Implemented Widgets ( `0.1.0` Focus )
+* **Basic Inputs**
+    * `BaseButton`
+      * [x] `PushButton` ( *WinUI3 Base* )
+      * [x] `PrimaryButton` 
+      * [x] `TransparentPushButton`
+    * [x] `HyperlinkButton` ( *WinUI3 Base* )
+    * [x] `RepeatButton` ( *WinUI3 Base* )
+    * [x] `ToggleButton` ( *WinUI3 Base* )
+      * [x] `TransparentToggleButton`
+      * [x] `SegmentedButton`
+    * [x] `ToolButton`
+      * [x] `TransparentToolButton`
+    * [x] `CheckBox` ( *WinUI3 Base* )
+    * [x] `RadioButton` ( *WinUI3 Base* )
+
+### ⏳ Planned Widgets (Future Development)
+
+* **Basic Inputs (Cont.)**
+    * [ ] `DropDownButton` ( *WinUI3* )
+    * [ ] `SplitButton` ( *WinUI3* )
+    * [ ] `ToggleSplitButton` ( *WinUI3* )
+    * [ ] `ColorPicker` ( *WinUI3* )
+    * [ ] `ComboBox` ( *WinUI3* )
+    * [ ] `RatingControl` ( *WinUI3* )
+    * [ ] `Slider` ( *WinUI3* )
+    * [ ] `ToggleSwitch` ( *WinUI3* )
 
 ## Contributing
 We welcome contributions from anyone interested in modern UI design and PyQt5 development. If you wish to contribute, please:
@@ -40,4 +111,4 @@ This project is licensed under the [LICENSE](LICENSE). See the LICENSE file for 
     
 Project Maintainer: [Magicsoldier19 - HomePage](https://github.com/JIA-WEI-LI)
 
-<!-- Project Link: [PyLunix - GitHub](https://github.com/JIA-WEI-LI/PyLunix) -->
+Project Link: [PyLunix - GitHub](https://github.com/JIA-WEI-LI/PyLunix)
