@@ -1,0 +1,32 @@
+RadioButton[class=RadioButton]{
+    background: RadioButtonBackground;
+    border: RadioButtonBackground;
+    border-radius: 5px;
+    color: RadioButtonForeground;
+    font-family: RadioButtonFontFamily;
+    font-size: RadioButtonFontSize;
+    font-weight: RadioButtonFontWeight;
+    padding: RadioButtonPadding;
+    padding-left: 24px;
+    min-width: RadioButtonMinWidth;
+    outline: none;
+}
+RadioButton[class=RadioButton]:hover {
+    background: RadioButtonBackgroundPointerOver;
+    border: RadioButtonBorderBrushPointerOver;
+    color: RadioButtonForegroundPointerOver;
+}
+RadioButton[class=RadioButton]:pressed {
+    background: RadioButtonBackgroundPressed;
+    border: RadioButtonBackgroundPressed;
+    color: RadioButtonForegroundPressed;
+}
+RadioButton[class=RadioButton]:disabled {
+    background: RadioButtonBackgroundDisabled;
+    border: RadioButtonBorderBrushDisabled;
+    color: RadioButtonForegroundDisabled;
+}
+RadioButton[class="RadioButton"]::indicator {
+    width: 0px;
+    height: 0px;
+}

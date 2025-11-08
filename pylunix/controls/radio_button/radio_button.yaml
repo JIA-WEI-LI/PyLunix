@@ -1,0 +1,79 @@
+#  region Color
+# StaticResource
+RadioButtonForeground: TextFillColorPrimaryBrush
+RadioButtonForegroundPointerOver: TextFillColorPrimaryBrush
+RadioButtonForegroundPressed: TextFillColorPrimaryBrush
+RadioButtonForegroundDisabled: TextFillColorDisabledBrush
+
+# Background
+RadioButtonBackground: ControlFillColorTransparentBrush
+RadioButtonBackgroundPointerOver: ControlFillColorTransparentBrush
+RadioButtonBackgroundPressed: ControlFillColorTransparentBrush
+RadioButtonBackgroundDisabled: ControlFillColorTransparentBrush
+
+# Border
+RadioButtonBorderBrush: ControlFillColorTransparentBrush
+RadioButtonBorderBrushPointerOver: ControlFillColorTransparentBrush
+RadioButtonBorderBrushPressed: ControlFillColorTransparentBrush
+RadioButtonBorderBrushDisabled: ControlFillColorTransparentBrush
+
+# Outer Ellipse Stroke
+RadioButtonOuterEllipseStroke: ControlStrongStrokeColorDefaultBrush
+RadioButtonOuterEllipseStrokePointerOver: ControlStrongStrokeColorDefaultBrush
+RadioButtonOuterEllipseStrokePressed: ControlStrongStrokeColorDisabledBrush
+RadioButtonOuterEllipseStrokeDisabled: ControlStrongStrokeColorDisabledBrush
+
+# Outer Ellipse Fill
+RadioButtonOuterEllipseFill: ControlAltFillColorSecondaryBrush
+RadioButtonOuterEllipseFillPointerOver: ControlAltFillColorTertiaryBrush
+RadioButtonOuterEllipseFillPressed: ControlAltFillColorQuarternaryBrush
+RadioButtonOuterEllipseFillDisabled: ControlAltFillColorDisabledBrush
+
+# Outer Ellipse Stroke (Checked)
+RadioButtonOuterEllipseCheckedStroke: AccentFillColorDefaultBrush
+RadioButtonOuterEllipseCheckedStrokePointerOver: AccentFillColorSecondaryBrush
+RadioButtonOuterEllipseCheckedStrokePressed: AccentFillColorTertiaryBrush
+RadioButtonOuterEllipseCheckedStrokeDisabled: AccentFillColorDisabledBrush
+
+# Outer Ellipse Fill (Checked)
+RadioButtonOuterEllipseCheckedFill: AccentFillColorDefaultBrush
+RadioButtonOuterEllipseCheckedFillPointerOver: AccentFillColorSecondaryBrush
+RadioButtonOuterEllipseCheckedFillPressed: AccentFillColorTertiaryBrush
+RadioButtonOuterEllipseCheckedFillDisabled: AccentFillColorDisabledBrush
+
+# Text
+RadioButtonCheckGlyphFill: TextOnAccentFillColorPrimaryBrush
+RadioButtonCheckGlyphFillPointerOver: TextOnAccentFillColorPrimaryBrush
+RadioButtonCheckGlyphFillPressed: TextOnAccentFillColorPrimaryBrush
+RadioButtonCheckGlyphFillDisabled: TextOnAccentFillColorPrimary
+
+# Circle
+RadioButtonCheckGlyphStroke: CircleElevationBorderBrush
+RadioButtonCheckGlyphStrokePointerOver: CircleElevationBorderBrush
+RadioButtonCheckGlyphStrokePressed: CircleElevationBorderBrush
+RadioButtonCheckGlyphStrokeDisabled: CircleElevationBorderBrush
+
+# Circle (Checked)
+RadioButtonCheckGlyphStrokeChecked: AccentControlElevationBorderBrush
+RadioButtonCheckGlyphStrokeCheckedPointerOver: AccentControlElevationBorderBrush
+RadioButtonCheckGlyphStrokeCheckedPressed: AccentControlElevationBorderBrush
+RadioButtonCheckGlyphStrokeCheckedDisabled: ControlElevationBorderBrush
+
+# StaticResource
+RadioButtonContentPointerOverForegroundThemeBrush: SystemColorHighlightTextColor
+
+# endregion
+
+# region Thinckness
+RadioButtonPadding: "5px 12px 5px 12px"
+# RadioButtonPadding: "8px 6px 0px 0px"
+HorizontalAlignment: "left"
+VerticalAlignment: "Center"
+RadioButtonMinWidth: "120 px"
+# endregion
+
+# region Font
+RadioButtonFontFamily: "Segoe UI"
+RadioButtonFontWeight: "Normal"
+RadioButtonFontSize: "14px"
+# endregion
