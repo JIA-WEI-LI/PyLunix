@@ -5,6 +5,7 @@ import logging
 import threading
 
 from .widget_registry import WidgetRegistry
+from ..config.path import COMMON_THEME_YAML, component_yaml_path
 from ..utils.yaml_util import YAMLProcessor
 from ..utils.qss_utils import QSSProcessor
 
@@ -17,7 +18,6 @@ class ThemeManager:
     _RESOLVED_CACHE: Dict[str, Dict[str, Any]] = {}
     _RAW_DATA_CACHE: Dict[str, Dict[str, Any]] = {}
     _COMMON_DICT_CACHE: Dict[str, Any] = None
-
     _LOADED_COMPONENTS: Set[str] = set()
 
     @classmethod
@@ -29,12 +29,11 @@ class ThemeManager:
     def __init__(self):
         self.theme = "Default"
 
-        self.common_yaml_path = Path(__file__).parent.parent / "resources" / "common_themeresources_any.yaml"
-
+        self.common_yaml_path = COMMON_THEME_YAML
         self.yaml_processor = YAMLProcessor(str(self.common_yaml_path))
         self._COMMON_DICT_CACHE = self.yaml_processor.yaml_to_dict()
         self.component_resources: Dict[str, str] = dict(self._COMMON_DICT_CACHE)
-        # self.component_resources: Dict[str, str] = dict(self.yaml_processor.yaml_to_dict())
+
         self.qss_processor = QSSProcessor(self.component_resources)
         self.widget_registry = WidgetRegistry(self.qss_processor)
 
@@ -76,8 +75,7 @@ class ThemeManager:
                 cached = self._RESOLVED_CACHE[component_name]
                 return cached["data"], cached["path"]
 
-            DIR = os.path.dirname(os.path.dirname(__file__))
-            yaml_path = os.path.join(DIR, components_dir, component_name, f"{component_name}.yaml")
+            yaml_path = component_yaml_path(components_dir, component_name)
 
             process = YAMLProcessor(self.common_yaml_path)
             resolved_data = process.resolve(yaml_path, self.theme)

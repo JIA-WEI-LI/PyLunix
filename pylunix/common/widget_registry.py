@@ -3,6 +3,8 @@ from pathlib import Path
 import logging
 from typing import Dict, Set
 
+from ..config.path import component_qss_path
+
 logger = logging.getLogger("WidgetRegistry")
 
 class WidgetRegistry:
@@ -23,7 +25,7 @@ class WidgetRegistry:
         if component_name in self._missing_qss_components:
             return None
             
-        qss_path = Path("pylunix/controls") / component_name / f"{component_name}.qss"
+        qss_path = component_qss_path("controls", component_name)
         
         if qss_path.exists():
             self._existing_qss_paths[component_name] = qss_path
@@ -34,69 +36,52 @@ class WidgetRegistry:
             return None
 
     def register(self, widget, component_name: str | None = None):
-        if widget in self._widgets:
-            self._widgets[widget] = component_name
-            return
-
         self._widgets[widget] = component_name
 
+        applied = self._apply_qss(widget, component_name)
+
+        if not applied:
+            logger.debug("No QSS applied for widget %r (component=%r).", widget, component_name)
+
+        if not applied:
+            logger.debug("No QSS applied for widget %r (component=%r).", widget, component_name)
+
+    def _apply_qss(self, widget, component_name: str | None) -> bool:
         applied = False
-        
+
         qss_path = self._get_qss_path(component_name)
         if qss_path:
-            try:
-                qss_content = self._qss_manager.apply_to_file(str(qss_path))
-                widget.setStyleSheet(qss_content)
-                applied = True
-            except Exception as e:
-                logger.exception("Failed to apply qss for %s: %s", qss_path, e)
+            applied = self._apply_qss_from_path(widget, qss_path)
+
         if not applied:
             qss_path_prop = widget.property("qss_path")
             if qss_path_prop:
                 qss_path_prop = Path(str(qss_path_prop))
                 if qss_path_prop.exists():
-                    try:
-                        qss_content = self._qss_manager.apply_to_file(str(qss_path_prop))
-                        widget.setStyleSheet(qss_content)
-                        applied = True
-                    except Exception:
-                        logger.exception("Failed to apply qss from widget property qss_path=%s", qss_path_prop)
-
-        if not applied:
-            logger.debug("No QSS applied for widget %r (component=%r).", widget, component_name)
+                    applied = self._apply_qss_from_path(widget, qss_path_prop)
+        return applied
+    
+    def _apply_qss_from_path(self, widget, qss_path: Path) -> bool:
+        try:
+            qss_content = self._qss_manager.apply_to_file(str(qss_path))
+            widget.setStyleSheet(qss_content)
+            return True
+        except Exception:
+            logger.exception("Failed to apply QSS from %s", qss_path)
+            return False
 
     def update_all(self):
         for widget, component_name in list(self._widgets.items()):
             if widget is None:
                 continue
-            
-            applied = False
-            qss_path = self._get_qss_path(component_name)
-            if qss_path:
-                try:
-                    qss_content = self._qss_manager.apply_to_file(str(qss_path))
-                    widget.setStyleSheet(qss_content)
-                    applied = True
-                except Exception:
-                    logger.exception("Failed to reapply qss for %s", qss_path)
-            
-            if not applied:
-                qss_path_prop = widget.property("qss_path")
-                if qss_path_prop:
-                    # (此處省略了快取，但理想情況下也應該快取)
-                    qss_path_prop = Path(str(qss_path_prop))
-                    if qss_path_prop.exists():
-                        try:
-                            qss_content = self._qss_manager.apply_to_file(str(qss_path_prop))
-                            widget.setStyleSheet(qss_content)
-                            applied = True
-                        except Exception:
-                            logger.exception("Failed to reapply qss from widget property %s", qss_path_prop)
+
+            applied = self._apply_qss(widget, component_name)
+
             if not applied:
                 logger.debug("Skipped reapplying QSS for widget %r (component=%r).", widget, component_name)
-                
+
             if hasattr(widget, 'updateIcon'):
                 try:
                     widget.updateIcon()
                 except Exception:
-                    logger.exception("Failed to call update_icon on widget %r", widget)
+                    logger.exception("Failed to call updateIcon on widget %r", widget)
