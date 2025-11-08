@@ -1,6 +1,6 @@
 # PyLunix
 
-[![Version](https://img.shields.io/badge/version-0.0.1-forestgreen)](#)
+[![Version](https://img.shields.io/badge/version-0.0.2-forestgreen)](#)
 [![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](#)
 [![PyQt5](https://img.shields.io/badge/PyQt5-5.15.11-blue)](#)
 
