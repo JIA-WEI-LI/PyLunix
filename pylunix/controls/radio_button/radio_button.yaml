@@ -59,9 +59,6 @@ RadioButtonCheckGlyphStrokeCheckedPointerOver: AccentControlElevationBorderBrush
 RadioButtonCheckGlyphStrokeCheckedPressed: AccentControlElevationBorderBrush
 RadioButtonCheckGlyphStrokeCheckedDisabled: ControlElevationBorderBrush
 
-# StaticResource
-RadioButtonContentPointerOverForegroundThemeBrush: SystemColorHighlightTextColor
-
 # endregion
 
 # region Thinckness

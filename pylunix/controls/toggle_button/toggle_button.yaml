@@ -62,9 +62,6 @@ ToggleButtonBorderBrushIndeterminateDisabled: "ControlStrokeColorDefaultBrush"
 
 # endregion
 
-# --- SolidColorBrush Definitions ---
-ToggleButtonBackgroundThemeBrush: "transparent"
-
 # region Thinckness
 ToggleButtonPadding: "5px 11px 6px 11px"
 ToggleButtonCornerRadius: "5px"

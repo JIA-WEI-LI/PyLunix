@@ -60,7 +60,7 @@ BaseButton[class="SegmentedButton"]:checked:disabled {
 }
 
 BaseButton[class="TransparentPushButton"]{
-    background-color: ButtonBackgroundThemeBrush;
+    background-color: transparent;
     border-radius: ButtonCornerRadius;
     color: ButtonForeground;
     font-family: ButtonFontFamily;

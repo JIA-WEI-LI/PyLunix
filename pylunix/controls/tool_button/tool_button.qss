@@ -123,8 +123,7 @@ ToolButton[class~="TransparentToggleToolButton"]:checked:disabled {
 
 ToolButton[class~="TransparentToolButton"],
 ToolButton[class~="TransparentToggleToolButton"] {
-    background-color: ToolButtonBackgroundThemeBrush;
-    
+    background-color: transparent;
     border: none;
     border-width: ToolButtonBorderThemeThickness;
     border-color: rgba(255, 255, 255, 0.05);

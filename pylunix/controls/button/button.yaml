@@ -38,9 +38,6 @@ ButtonBorderBrushDisabled: "ControlStrokeColorDefaultBrush"
 # Thickness
 ButtonBorderThemeThickness: "1px"
 
-# SolidColorBrush Definitions (Theme Brushes)
-ButtonBackgroundThemeBrush: "Transparent"
-
 # region Thinckness
 ButtonPadding: "5px 11px 6px 11px"
 ButtonCornerRadius: "5px"
