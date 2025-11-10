@@ -7,6 +7,14 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `0.2.0-dev2` ( 開發預定：2025-11-X )
+### 新增
+- 新增基礎元件：`list_box`、`buttons`(button_group)、`radio_buttons`...等。
+
+## `0.2.0-dev1` ( 開發預定：2025-11-10 )
+### 重構
+- 重構 `.yaml` 相關處理，各元件 `.yaml` 新增預設值預防無法正確找到對應色值。
+
 ##  `0.1.0`  ： 2025-11-08
 ### 新增
 - 新增七種基礎元件：`button`、`check_box`、`hyperlink_button`、`radio_button`、`repeat_button`、`toggle_button`、`tool_button`。
