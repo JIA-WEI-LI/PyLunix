@@ -14,17 +14,31 @@ required-markers = [
 
 [[package]]
 name = "pylunix"
-version = "0.1.1"
+version = "0.2.0.dev0"
 source = { editable = "." }
 dependencies = [
+    { name = "pylunix-icon-kit" },
     { name = "pyqt5" },
     { name = "pyyaml" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "pylunix-icon-kit", specifier = ">=1.0.0" },
     { name = "pyqt5" },
     { name = "pyyaml", specifier = ">=6.0.3" },
+]
+
+[[package]]
+name = "pylunix-icon-kit"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyqt5" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fa/1f/ab62b0f1bec2e4c2cd81835a43a0e3ab044d42989c998f32cb4cf7a90ed2/pylunix_icon_kit-1.0.0.tar.gz", hash = "sha256:e2d4e8aa894561cdbd5f5bc84d3988b49961e132250ddee63264946e3d1a7094", size = 8811, upload-time = "2025-11-11T03:15:10.41Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/08/572a492e91b1330422ad3a0232f54546d133fec5c0a58554e069123fc806/pylunix_icon_kit-1.0.0-py3-none-any.whl", hash = "sha256:cdc951662e716bddb8461bcce34e5bf8837c08d2da03d61d9adbcfabbc8c70a5", size = 9235, upload-time = "2025-11-11T03:15:09.255Z" },
 ]
 
 [[package]]

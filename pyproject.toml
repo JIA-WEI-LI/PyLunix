@@ -13,6 +13,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.8"
 dependencies = [
+    "pylunix-icon-kit>=1.0.0",
     "pyqt5",
     "pyyaml>=6.0.3",
 ]
