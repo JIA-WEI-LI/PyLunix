@@ -7,13 +7,10 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## `0.2.0-dev2` ( 開發預定：2025-11-X )
-### 新增
-- 新增基礎元件：`list_box`、`buttons`(button_group)、`radio_buttons`...等。
-
-## `0.2.0-dev1` ( 開發預定：2025-11-10 )
+## `0.2.0-dev1` ：2025-11-11
 ### 重構
-- 重構 `.yaml` 相關處理，各元件 `.yaml` 新增預設值預防無法正確找到對應色值。
+- 新增自製套件 `pylunix-icon-kit` ( 版本 `v1.0.0` ) 
+- 刪除原有圖標檔案，改用 `pylunix-icon-kit` 自動生成圖標相關檔案並引用。
 
 ## `0.1.1` ： 2025-11-10
 ### 修正

@@ -14,7 +14,7 @@ required-markers = [
 
 [[package]]
 name = "pylunix"
-version = "0.2.0.dev0"
+version = "0.2.0.dev1"
 source = { editable = "." }
 dependencies = [
     { name = "pylunix-icon-kit" },
