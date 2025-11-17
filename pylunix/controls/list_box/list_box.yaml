@@ -1,36 +1,33 @@
-
-ListBoxBorderThemeThickness: "0"
-
+# region Color
+# ListBox Foreground
 ListBoxForeground: TextFillColorPrimaryBrush
 
+# ListBox Background
 ListBoxBackground: SystemControlBackgroundChromeMediumLowBrush
 
+# ListBox Border
 ListBoxBorder: TextFillColorPrimaryBrush
 
+# ListBox Item Foreground
 ListBoxItemForeground: TextFillColorPrimaryBrush
 ListBoxItemForegroundDisabled: TextFillColorDisabledBrush
+
+# ListBox Item Background
+ListBoxItemBackground: "transparent"
 ListBoxItemBackgroundPointerOver: SubtleFillColorSecondaryBrush
 ListBoxItemBackgroundPressed: SubtleFillColorTertiaryBrush
 ListBoxItemBackgroundSelected: SystemControlHighlightListAccentLowBrush
 ListBoxItemBackgroundSelectedPointerOver: SystemControlHighlightListAccentMediumBrush
 ListBoxItemBackgroundSelectedPressed: SystemControlHighlightListAccentHighBrush
+# endregion
 
-ListBoxBackgroundThemeBrush: "#CCFFFFFF"
-ListBoxBorderThemeBrush: "Transparent"
-ListBoxDisabledForegroundThemeBrush: "#66FFFFFF"
-ListBoxFocusBackgroundThemeBrush: "#FFFFFFFF"
-ListBoxForegroundThemeBrush: "#FF000000"
-ListBoxItemDisabledForegroundThemeBrush: "#66FFFFFF"
-ListBoxItemPointerOverBackgroundThemeBrush: "#21000000"
-ListBoxItemPointerOverForegroundThemeBrush: "#FF000000"
-ListBoxItemPressedBackgroundThemeBrush: "#FFD3D3D3"
-ListBoxItemPressedForegroundThemeBrush: "#FF000000"
-ListBoxItemSelectedBackgroundThemeBrush: SystemControlHighlightListAccentLowBrush
-ListBoxItemSelectedDisabledBackgroundThemeBrush: "#66FFFFFF"
-ListBoxItemSelectedDisabledForegroundThemeBrush: "#99000000"
-ListBoxItemSelectedForegroundThemeBrush: "White"
-ListBoxItemSelectedPointerOverBackgroundThemeBrush: "#FF5F37BE"
-
+# region Thinckness
+ListBoxBorderThemeThickness: "0px"
 ListBoxItemPadding: "12px 9px 12px 12px"
+# endregion
 
-ListBoxItemBackground: "transparent"
+# region Font
+ListBoxFontFamily: "Segoe UI" # If you want to change this, remember to check qss file.
+ListBoxFontWeight: "Bold"
+ListBoxFontSize: "14px"
+# endregion

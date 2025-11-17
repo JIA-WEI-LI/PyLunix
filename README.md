@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
 This section tracks the implementation progress of core UI components based on the WinUI 3 design specification.
 
-### Implemented Widgets ( `0.1.0` Focus )
+### Implemented Widgets ( `0.2.0-dev1` Focus )
 * **Basic Inputs**
     * `BaseButton`
       * [x] `PushButton` ( *WinUI3 Base* )
@@ -78,6 +78,8 @@ This section tracks the implementation progress of core UI components based on t
       * [x] `TransparentToolButton`
     * [x] `CheckBox` ( *WinUI3 Base* )
     * [x] `RadioButton` ( *WinUI3 Base* )
+* **Collections**
+    * [x] `ListBox` ( *WinUI3 Base* )
 
 ### ⏳ Planned Widgets (Future Development)
 
