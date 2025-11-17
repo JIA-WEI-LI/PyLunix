@@ -1,0 +1,37 @@
+QListWidget[class="ListBox"] {
+    border: 0px solid ListBoxBorder; 
+    background-color: ListBoxBackground; 
+    color: ListBoxForeground;
+}
+QListWidget[class="ListBox"]:focus {
+    background-color: ListBoxBackground;
+    outline: none;
+}
+QListWidget[class="ListBox"]::item {
+    color: ListBoxForeground;
+    background-color: ListBoxItemBackground;
+    padding: ListBoxItemPadding;
+}
+QListWidget[class="ListBox"]::item:focus {
+    background-color: ListBoxItemBackgroundSelected;
+    outline: none;
+}
+QListWidget[class="ListBox"]::item:hover {
+    background-color: ListBoxItemBackgroundPointerOver;
+}
+QListWidget[class="ListBox"]::item:pressed {
+    background-color: ListBoxItemBackgroundPressed;
+}
+QListWidget[class="ListBox"]::item:selected {
+    background-color: ListBoxItemBackgroundSelected;
+}
+QListWidget[class="ListBox"]::item:selected:pressed {
+    background-color: red;
+}
+QListWidget[class="ListBox"]::item:selected:hover {
+    background-color: ListBoxItemBackgroundSelectedPointerOver;
+}
+QListWidget[class="ListBox"]::item:disabled {
+    color: ListBoxItemForegroundDisabled;
+    background-color: transparent; 
+}

@@ -125,6 +125,13 @@ Default:
   SystemColorHotlightColorBrush: "#FF00FF"
   SystemColorGrayTextColorBrush: "#FF00FF"
 
+  # Cant found in xaml
+  SystemControlBackgroundChromeMediumLowBrush: "#2b2b2b"
+
+  SystemControlHighlightListAccentLowBrush:  "#115990"
+  SystemControlHighlightListAccentMediumBrush: "#0969b2"
+  SystemControlHighlightListAccentHighBrush: "#0470c2"
+
   # LinearGradientBrush ( can't import in qss)
   LinearGradientBrush: "#12FFFFFF"
   ControlElevationBorderBrush: "#12FFFFFF"
@@ -255,6 +262,13 @@ Light:
   SystemColorHighlightTextColorBrush: "#FF00FF"
   SystemColorHotlightColorBrush: "#FF00FF"
   SystemColorGrayTextColorBrush: "#FF00FF"
+
+  # Cant found in xaml
+  SystemControlBackgroundChromeMediumLowBrush: "#f2f2f2"
+  
+  SystemControlHighlightListAccentLowBrush:  "#91c1e5"
+  SystemControlHighlightListAccentMediumBrush: "#61a9e0"
+  SystemControlHighlightListAccentHighBrush: "#499ddd"
 
   # LinearGradientBrush ( can't import in qss)
   LinearGradientBrush: "#12FFFFFF"

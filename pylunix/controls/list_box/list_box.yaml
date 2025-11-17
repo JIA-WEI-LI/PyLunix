@@ -1,0 +1,36 @@
+
+ListBoxBorderThemeThickness: "0"
+
+ListBoxForeground: TextFillColorPrimaryBrush
+
+ListBoxBackground: SystemControlBackgroundChromeMediumLowBrush
+
+ListBoxBorder: TextFillColorPrimaryBrush
+
+ListBoxItemForeground: TextFillColorPrimaryBrush
+ListBoxItemForegroundDisabled: TextFillColorDisabledBrush
+ListBoxItemBackgroundPointerOver: SubtleFillColorSecondaryBrush
+ListBoxItemBackgroundPressed: SubtleFillColorTertiaryBrush
+ListBoxItemBackgroundSelected: SystemControlHighlightListAccentLowBrush
+ListBoxItemBackgroundSelectedPointerOver: SystemControlHighlightListAccentMediumBrush
+ListBoxItemBackgroundSelectedPressed: SystemControlHighlightListAccentHighBrush
+
+ListBoxBackgroundThemeBrush: "#CCFFFFFF"
+ListBoxBorderThemeBrush: "Transparent"
+ListBoxDisabledForegroundThemeBrush: "#66FFFFFF"
+ListBoxFocusBackgroundThemeBrush: "#FFFFFFFF"
+ListBoxForegroundThemeBrush: "#FF000000"
+ListBoxItemDisabledForegroundThemeBrush: "#66FFFFFF"
+ListBoxItemPointerOverBackgroundThemeBrush: "#21000000"
+ListBoxItemPointerOverForegroundThemeBrush: "#FF000000"
+ListBoxItemPressedBackgroundThemeBrush: "#FFD3D3D3"
+ListBoxItemPressedForegroundThemeBrush: "#FF000000"
+ListBoxItemSelectedBackgroundThemeBrush: SystemControlHighlightListAccentLowBrush
+ListBoxItemSelectedDisabledBackgroundThemeBrush: "#66FFFFFF"
+ListBoxItemSelectedDisabledForegroundThemeBrush: "#99000000"
+ListBoxItemSelectedForegroundThemeBrush: "White"
+ListBoxItemSelectedPointerOverBackgroundThemeBrush: "#FF5F37BE"
+
+ListBoxItemPadding: "12px 9px 12px 12px"
+
+ListBoxItemBackground: "transparent"
