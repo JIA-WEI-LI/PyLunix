@@ -1,27 +1,28 @@
 import os
 from enum import Enum
 
-from .typography import PyLnuixTypography
+from .typography import PyLnuixTypography, TypographyStyle
 from .theme_manager import ThemeManager
 from ..utils.yaml_util import YAMLProcessor
 
 theme_manager = ThemeManager.get_instance()
 
 class PyLunixStyleSheet(Enum):
-    def __new__(cls, value, components_dir):
+    def __new__(cls, value, components_dir, typography_style):
         obj = object.__new__(cls)
         obj._value_ = value
         obj._components_dir = components_dir
+        obj._typography_style = typography_style
         return obj
     
-    BUTTON = "button", "controls"
-    CHECK_BOX = "check_box", "controls"
-    LIST_BOX = "list_box", "controls"
-    RADIO_BUTTON = "radio_button", "controls"
-    REPEAT_BUTTON = "repeat_button", "controls"
-    TOGGLE_BUTTON = "toggle_button", "controls"
-    TOOL_BUTTON = "tool_button", "controls"
-    HYPERLINK_BUTTON = "hyperlink_button", "controls"
+    BUTTON = "button", "controls", TypographyStyle.BODY
+    CHECK_BOX = "check_box", "controls", TypographyStyle.BODY
+    LIST_BOX = "list_box", "controls", TypographyStyle.BODY
+    RADIO_BUTTON = "radio_button", "controls", TypographyStyle.BODY
+    REPEAT_BUTTON = "repeat_button", "controls", TypographyStyle.BODY
+    TOGGLE_BUTTON = "toggle_button", "controls", TypographyStyle.BODY
+    TOOL_BUTTON = "tool_button", "controls", TypographyStyle.BODY
+    HYPERLINK_BUTTON = "hyperlink_button", "controls", TypographyStyle.BODY
 
     def apply(self, widget, register=True):
         widget.setObjectName(self.value)
@@ -31,7 +32,7 @@ class PyLunixStyleSheet(Enum):
             theme_manager.register(widget, components_dir, self.value)
 
         try:
-            widget.setFont(PyLnuixTypography.get_font(self.value))
+            widget.setFont(PyLnuixTypography.get_font(self._typography_style))
         except Exception as e:
             print("[stylesheet.py] : " + e)
 
