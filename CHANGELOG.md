@@ -7,6 +7,18 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `0.2.0-dev3` ：2025-11-18
+### 重構
+- 重新組織專案結構，增強元件層級清晰度
+
+    將 UI 元件分為 Components 和 Views，並優化通用模組命名，以提升專案的可擴展性和可維護性。
+
+    主要變更點:
+    - 基礎元件 (Controls) 移動到 components/controls/。
+    - 視窗/對話框 (Dialogs) 移動到 views/dialogs/。
+    - 通用模組 (Common) 重命名為 theme/，專注於樣式。
+    - 刪除舊的 controls/ 和 common/ 目錄。"
+
 ## `0.2.0-dev2` ：2025-11-18
 ### 新增
 - 新增一種基礎元件：`list_box`。
