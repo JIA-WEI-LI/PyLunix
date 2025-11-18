@@ -24,9 +24,3 @@ RepeatButtonBorderBrushDisabled: ControlStrokeColorDefaultBrush
 RepeatButtonPadding: "5px 11px 6px 11px"
 RepeatButtonCornerRadius: "5px"
 # endregion
-
-# region Font
-FontFamily: "Segoe UI"
-FontWeight: "Normal"
-FontSize: "14px"
-# endregion

@@ -8,9 +8,6 @@ BaseButton[class=RepeatButton]{
     border-top-left-radius: RepeatButtonCornerRadius;
     border-top-right-radius: RepeatButtonCornerRadius;
     color: RepeatButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: RepeatButtonPadding;
     /* outline: none; */
 }

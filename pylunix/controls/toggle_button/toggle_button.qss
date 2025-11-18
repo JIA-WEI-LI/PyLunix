@@ -9,9 +9,6 @@ ToggleButton[class="SegmentedButton"]  {
     border-top-left-radius: ToggleButtonCornerRadius;
     border-top-right-radius: ToggleButtonCornerRadius;
     color: ToggleButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: ToggleButtonPadding;
     /* outline: none; */
 }
@@ -46,9 +43,6 @@ ToggleButton[class="TransparentToggleButton"]:checked {
     border-color: ToggleButtonBorderBrushChecked;
     border-radius: ToggleButtonCornerRadius;
     color: ToggleButtonForegroundChecked;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: ButtonPadding;
 }
 ToggleButton[class="ToggleButton"]:checked:hover,
@@ -77,9 +71,6 @@ ToggleButton[class="TransparentToggleButton"] {
     background-color: transparent;
     border-radius: ToggleButtonCornerRadius;
     color: ToggleButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: ToggleButtonPadding;
 }
 

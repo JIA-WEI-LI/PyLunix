@@ -1,9 +1,10 @@
 from typing import Union, Callable
 from PyQt5.QtWidgets import QPushButton, QWidget
-from PyQt5.QtGui import QIcon, QPainter
+from PyQt5.QtGui import QIcon, QPainter, QFont
 from PyQt5.QtCore import QSize, QRectF, Qt, QTimer
 
 from ...common.stylesheet import PyLunixStyleSheet
+from ...common.typography import PyLnuixTypography
 
 class BaseButton(QPushButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):
@@ -15,7 +16,7 @@ class BaseButton(QPushButton):
         self._current_icon_color = None
 
         self.setProperty("class", "PushButton")
-        self.setMinimumHeight(32)
+        self.setMinimumHeight(36)
         self.setIconSize(QSize(16, 16))
         self.setText(text if text else "")
         self.setIcon(icon if icon else QIcon())
@@ -53,8 +54,8 @@ class BaseButton(QPushButton):
         self._current_icon_color = color
         if color not in self._icon_cache:
             self._icon_cache[color] = self._icon_source(color)
-        super().setIcon(self._icon_cache[color])
         self._icon = self._icon_cache[color]
+        super().setIcon(QIcon())
 
     def sizeHint(self):
         base = super().sizeHint()
@@ -95,7 +96,7 @@ class BaseButton(QPushButton):
         icon_y = (self.height() - icon_height) / 2
 
         text_width = self.fontMetrics().horizontalAdvance(self.text()) if self.text() else 0
-        spacing = 6
+        spacing = 28
 
         total_width = icon_width + spacing + text_width if text_width else icon_width
         icon_x = (self.width() - total_width) / 2
@@ -111,15 +112,15 @@ class BaseButton(QPushButton):
 class PushButton(BaseButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):
         super().__init__(text=text, icon=icon, parent=parent)
-        self.setProperty("class", "PushButton")
 
+        self.setProperty("class", "PushButton")
         PyLunixStyleSheet.BUTTON.apply(self)
 
 class PrimaryButton(BaseButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):
         super().__init__(text=text, icon=icon, parent=parent)
-        self.setProperty("class", "PrimaryButton")
 
+        self.setProperty("class", "PrimaryButton")
         PyLunixStyleSheet.BUTTON.apply(self)
 
     def _get_icon_color(self) -> str:
@@ -136,6 +137,6 @@ class PrimaryButton(BaseButton):
 class TransparentPushButton(BaseButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):
         super().__init__(text=text, icon=icon, parent=parent)
-        self.setProperty("class", "TransparentPushButton")
 
+        self.setProperty("class", "TransparentPushButton")
         PyLunixStyleSheet.BUTTON.apply(self)

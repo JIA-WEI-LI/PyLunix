@@ -23,9 +23,3 @@ HyperlinkButtonBorderThemeThickness: 1px""
 # region Thinckness
 HyperlinkButtonPadding: "5px 11px 6px 11px"
 # endregion
-
-# region Font
-FontFamily: "Segoe UI"
-FontWeight: "Normal"
-FontSize: "14px"
-# endregion

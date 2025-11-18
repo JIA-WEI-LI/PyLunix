@@ -2,9 +2,6 @@ QListWidget[class="ListBox"] {
     border: ListBoxBorderThemeThickness solid ListBoxBorder; 
     background-color: ListBoxBackground; 
     color: ListBoxForeground;
-    /* font-family: ListBoxFontFamily; */
-    font-weight: ListBoxFontWeight;
-    font-size: ListBoxFontSize;
 }
 QListWidget[class="ListBox"]:focus {
     background-color: ListBoxBackground;

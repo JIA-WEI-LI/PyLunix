@@ -68,9 +68,3 @@ HorizontalAlignment: "left"
 VerticalAlignment: "Center"
 RadioButtonMinWidth: "120 px"
 # endregion
-
-# region Font
-RadioButtonFontFamily: "Segoe UI"
-RadioButtonFontWeight: "Normal"
-RadioButtonFontSize: "14px"
-# endregion

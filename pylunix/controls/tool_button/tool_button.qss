@@ -6,9 +6,6 @@ ToolButton[class~="ToggleToolButton"] {
     border-color: ToolButtonBorderBrush;
     border-radius: ToolButtonCornerRadius;
     color: ToolButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: ToolButtonPadding;
 }
 
@@ -63,9 +60,6 @@ ToolButton[class~="TransparentToggleToolButton"]:checked {
     border-width: ToolButtonBorderThemeThickness;
     border-color: transparent;
     color: AccentToolButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: ToolButtonPadding;
 }
 
@@ -98,9 +92,6 @@ ToolButton[class~="TransparentToggleToolButton"]:checked {
     border-color: transparent;
     border-radius: ToolButtonCornerRadius;
     color: AccentToolButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: ToolButtonPadding;
 }
 ToolButton[class~="TransparentToggleToolButton"]:checked:hover {
@@ -129,9 +120,6 @@ ToolButton[class~="TransparentToggleToolButton"] {
     border-color: rgba(255, 255, 255, 0.05);
     border-radius: ToolButtonCornerRadius;
     color: ToolButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: ToolButtonPadding;
 }
 

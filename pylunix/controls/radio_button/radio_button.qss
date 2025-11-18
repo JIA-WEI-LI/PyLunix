@@ -3,9 +3,6 @@ RadioButton[class=RadioButton]{
     border: RadioButtonBackground;
     border-radius: 5px;
     color: RadioButtonForeground;
-    font-family: RadioButtonFontFamily;
-    font-size: RadioButtonFontSize;
-    font-weight: RadioButtonFontWeight;
     padding: RadioButtonPadding;
     padding-left: 24px;
     min-width: RadioButtonMinWidth;

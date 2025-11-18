@@ -42,9 +42,3 @@ ButtonBorderThemeThickness: "1px"
 ButtonPadding: "5px 11px 6px 11px"
 ButtonCornerRadius: "5px"
 # endregion
-
-# region Font
-ButtonFontFamily: "Segoe UI"
-ButtonFontWeight: "Normal"
-ButtonFontSize: "14px"
-# endregion

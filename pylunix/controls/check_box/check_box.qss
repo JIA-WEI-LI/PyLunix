@@ -3,9 +3,6 @@ CheckBox[class="CheckBox"] {
     border-color: CheckBoxBorderBrushUnchecked;
     border-width: CheckBoxBorderThickness;
     color: CheckBoxForegroundUnchecked;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: CheckBoxPadding;
     /* spacing: 8px; */
     min-width: CheckBoxMinWidth;

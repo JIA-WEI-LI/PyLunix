@@ -5,9 +5,6 @@ BaseButton[class="PushButton"]{
     border-color: ButtonBorderBrush;
     border-radius: ButtonCornerRadius;
     color: ButtonForeground;
-    font-family: ButtonFontFamily;
-    font-size: ButtonFontSize;
-    font-weight: ButtonFontWeight;
     padding: ButtonPadding;
     /* outline: none; */
 }
@@ -37,9 +34,6 @@ BaseButton[class="PrimaryButton"]{
     border-color: AccentButtonBorderBrush;
     border-radius: ButtonCornerRadius;
     color: AccentButtonForeground;
-    font-family: ButtonFontFamily;
-    font-size: ButtonFontSize;
-    font-weight: ButtonFontWeight;
     padding: ButtonPadding;
 }
 BaseButton[class="PrimaryButton"]:hover{
@@ -63,9 +57,6 @@ BaseButton[class="TransparentPushButton"]{
     background-color: transparent;
     border-radius: ButtonCornerRadius;
     color: ButtonForeground;
-    font-family: ButtonFontFamily;
-    font-size: ButtonFontSize;
-    font-weight: ButtonFontWeight;
     padding: ButtonPadding;
 }
 

@@ -66,9 +66,3 @@ ToggleButtonBorderBrushIndeterminateDisabled: "ControlStrokeColorDefaultBrush"
 ToggleButtonPadding: "5px 11px 6px 11px"
 ToggleButtonCornerRadius: "5px"
 # endregion
-
-# region Font
-FontFamily: "Segoe UI"
-FontWeight: "Normal"
-FontSize: "14px"
-# endregion

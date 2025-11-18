@@ -25,9 +25,3 @@ ListBoxItemBackgroundSelectedPressed: SystemControlHighlightListAccentHighBrush
 ListBoxBorderThemeThickness: "0px"
 ListBoxItemPadding: "12px 9px 12px 12px"
 # endregion
-
-# region Font
-ListBoxFontFamily: "Segoe UI" # If you want to change this, remember to check qss file.
-ListBoxFontWeight: "Bold"
-ListBoxFontSize: "14px"
-# endregion

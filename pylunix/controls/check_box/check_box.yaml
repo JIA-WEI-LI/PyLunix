@@ -107,9 +107,3 @@ CheckBoxPadding: "8px 5px 0px 0px"
 # Glyphs (use the same glyphs defined in XAML)
 CheckBoxCheckedGlyph: "\uE73E"
 CheckBoxIndeterminateGlyph: "\uE9AE"
-
-# region Font
-FontFamily: "Segoe UI"
-FontWeight: "Normal"
-FontSize: "14px"
-# endregion

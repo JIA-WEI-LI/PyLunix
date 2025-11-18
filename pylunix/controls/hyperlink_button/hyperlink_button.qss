@@ -4,9 +4,6 @@ HyperlinkButton[class="HyperlinkButton"] {
     border-radius: 5px;
     border-width: HyperlinkButtonBorderThemeThickness;
     color: HyperlinkButtonForeground;
-    font-family: FontFamily;
-    font-size: FontSize;
-    font-weight: FontWeight;
     padding: HyperlinkButtonPadding;
     outline: none;
 }
