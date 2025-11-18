@@ -3,8 +3,8 @@ from PyQt5.QtWidgets import QPushButton, QWidget
 from PyQt5.QtGui import QIcon, QPainter, QFont
 from PyQt5.QtCore import QSize, QRectF, Qt, QTimer
 
-from ...common.stylesheet import PyLunixStyleSheet
-from ...common.typography import PyLnuixTypography
+from ....common.stylesheet import PyLunixStyleSheet
+from ....common.typography import PyLnuixTypography
 
 class BaseButton(QPushButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):

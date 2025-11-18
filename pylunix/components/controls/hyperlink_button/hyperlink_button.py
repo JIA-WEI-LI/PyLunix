@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QPushButton, QWidget, QToolButton
 from PyQt5.QtGui import QIcon, QPainter, QCursor, QDesktopServices, QMouseEvent
 from PyQt5.QtCore import QSize, QRectF, Qt, QUrl, QEvent, QTimer
 
-from ...common.stylesheet import PyLunixStyleSheet
+from ....common.stylesheet import PyLunixStyleSheet
 
 class HyperlinkButton(QPushButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None, *args, **kwargs):

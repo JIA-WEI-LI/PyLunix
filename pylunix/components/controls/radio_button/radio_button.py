@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget, QRadioButton
 from PyQt5.QtGui import QIcon, QPainter, QColor, QPen
 from PyQt5.QtCore import QSize, QRectF, Qt
 
-from ...common.stylesheet import PyLunixStyleSheet
+from ....common.stylesheet import PyLunixStyleSheet
 
 class RadioButton(QRadioButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):

@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget, QToolButton
 from PyQt5.QtGui import QIcon, QPainter, QColor
 from PyQt5.QtCore import QSize, QRectF, Qt
 
-from ...common.stylesheet import PyLunixStyleSheet
+from ....common.stylesheet import PyLunixStyleSheet
 
 class ToolButton(QToolButton):
     def __init__(self, icon: QIcon, parent: QWidget = None):

@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget
 from PyQt5.QtGui import QIcon
 
 from ..button.button import BaseButton
-from ...common.stylesheet import PyLunixStyleSheet
+from ....common.stylesheet import PyLunixStyleSheet
 
 class ToggleButton(BaseButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):

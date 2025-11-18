@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QWidget, QListWidget
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import Qt
 
-from ...common.stylesheet import PyLunixStyleSheet
+from ....common.stylesheet import PyLunixStyleSheet
 
 class ListBox(QListWidget):
     def __init__(self, parent: QWidget = None):

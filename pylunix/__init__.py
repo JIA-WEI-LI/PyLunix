@@ -1,2 +1,2 @@
-from .controls import *
+from .components import *
 from .common import *

@@ -3,8 +3,8 @@ from PyQt5.QtWidgets import QCheckBox, QWidget, QStyleOptionButton, QStyle
 from PyQt5.QtGui import QIcon, QPainter, QColor, QPen
 from PyQt5.QtCore import QSize, Qt, QRect
 
-from ...common.stylesheet import PyLunixStyleSheet
-from ...icons import WinIcon
+from ....common.stylesheet import PyLunixStyleSheet
+from ....icons import WinIcon
 
 class CheckBox(QCheckBox):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):

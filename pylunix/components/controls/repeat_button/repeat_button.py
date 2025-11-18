@@ -3,7 +3,7 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QTimer
 
 from ..button.button import BaseButton
-from ...common.stylesheet import PyLunixStyleSheet
+from ....common.stylesheet import PyLunixStyleSheet
 
 class RepeatButton(BaseButton):
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None, *args, **kwargs):
