@@ -7,6 +7,13 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `0.2.0-dev2` ：2025-11-18
+### 新增
+- 新增一種基礎元件：`list_box`。
+- 新增字型類別 `TypographyStyle`、`PyLnuixTypography` 貼近實際文字選擇類別。
+### 重構
+- 新增 `PyLunixStyleSheet` 內各元素文字基礎設定。刪除各元件使用 `.qss`、`.yaml` 控制字型字體。
+
 ## `0.2.0-dev1` ：2025-11-11
 ### 重構
 - 新增自製套件 `pylunix-icon-kit` ( 版本 `v1.0.0` ) 
