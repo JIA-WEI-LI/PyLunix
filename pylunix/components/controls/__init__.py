@@ -4,6 +4,7 @@ from .hyperlink_button.hyperlink_button import HyperlinkButton
 from .list_box.list_box import ListBox
 from .radio_button.radio_button import RadioButton
 from .repeat_button.repeat_button import RepeatButton
+from .text_block.text_block import TextBlock
 from .toggle_button.toggle_button import ToggleButton, TransparentToggleButton, SegmentedButton
 from .tool_button.tool_button import ToolButton, PrimaryToolButton, TransparentToggleToolButton, TransparentToolButton, ToggleToolButton
 
@@ -17,6 +18,7 @@ __all__ = ["BaseButton",
            "RadioButton",
            "RepeatButton",
            "SegmentedButton",
+           "TextBlock",
            "ToggleButton",
            "ToggleToolButton",
            "ToolButton",
