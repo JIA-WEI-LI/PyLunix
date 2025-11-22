@@ -1,0 +1,43 @@
+#region Colors
+# Background
+TextControlBackground: "ControlFillColorDefaultBrush"
+TextControlBackgroundPointerOver: "ControlFillColorSecondaryBrush"
+TextControlBackgroundFocused: "ControlFillColorInputActiveBrush"
+TextControlBackgroundDisabled: "ControlFillColorDisabledBrush"
+
+# Border
+TextControlBorderBrush: "TextControlElevationBorderBrush"
+TextControlBorderBrushPointerOver: "TextControlElevationBorderBrush"
+TextControlBorderBrushFocused: "TextControlElevationBorderFocusedBrush"
+TextControlBorderBrushDisabled: "ControlStrokeColorDefaultBrush"
+
+# Foreground (Text)
+TextControlForeground: "TextFillColorPrimaryBrush"
+TextControlForegroundPointerOver: "TextFillColorPrimaryBrush"
+TextControlForegroundFocused: "TextFillColorPrimaryBrush"
+TextControlForegroundDisabled: "TemporaryTextFillColorDisabled"
+
+# Placeholder Text
+TextControlPlaceholderForeground: "TextFillColorSecondaryBrush"
+TextControlPlaceholderForegroundPointerOver: "TextFillColorSecondaryBrush"
+TextControlPlaceholderForegroundFocused: "TextFillColorSecondaryBrush"
+TextControlPlaceholderForegroundDisabled: "TextFillColorDisabledBrush"
+
+# Selection Highlight
+TextControlSelectionHighlightColor: "AccentFillColorSelectedTextBackgroundBrush"
+
+# Text Control Button
+TextControlButtonBackgroundPointerOver: "SubtleFillColorSecondaryBrush"
+TextControlButtonBackgroundPressed: "SubtleFillColorTertiaryBrush"
+TextControlButtonBorderBrush: "ControlFillColorTransparent"
+TextControlButtonBorderBrushPointerOver: "ControlFillColorTransparent"
+TextControlButtonBorderBrushPressed: "ControlFillColorTransparent"
+TextControlButtonForeground: "TextFillColorSecondaryBrush"
+TextControlButtonForegroundPointerOver: "TextFillColorSecondaryBrush"
+TextControlButtonForegroundPressed: "TextFillColorTertiaryBrush"
+#endregion
+
+# region Thinckness
+TextBoxTopHeaderMargin: "0px 0px 0px 8px"
+TextBoxInnerButtonMargin: "0px 4px 4px 4px"
+# endregion 

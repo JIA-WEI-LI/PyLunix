@@ -1,0 +1,39 @@
+TextBoxEdit[class="TextBoxEdit"]{
+    background-color: TextControlBackground;
+    color: TextControlForeground;
+    border-color: TextControlBorderBrush;
+    border-width: 1px;
+    border-style: none;
+    border-radius: 3px;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-bottom: 6px;
+    padding-right: 3px;
+}
+TextBoxEdit[class="TextBoxEdit"]:hover{
+    background-color: TextControlBackgroundPointerOver;
+    border-color: TextControlBorderBrushPointerOver;
+    color: TextControlForegroundPointerOver;
+}
+TextBoxEdit[class="TextBoxEdit"]:focus{
+    background-color: TextControlBackgroundFocused;
+    border-color: TextControlBorderBrushFocused;
+    color: TextControlForegroundFocused;
+}
+TextBoxEdit[class="TextBoxEdit"]:disabled{
+    background-color: TextControlBackgroundDisabled;
+    border-color: TextControlBorderBrushDisabled;
+    color: TextControlForegroundDisabled;
+}
+TextBoxEdit[class="TextBoxEdit"]:placeholder{
+    color: TextControlPlaceholderForeground;
+}
+TextBoxEdit[class="TextBoxEdit"]:placeholder:hover{
+    color: TextControlPlaceholderForegroundPointerOver;
+}
+TextBoxEdit[class="TextBoxEdit"]:placeholder:focus{
+    color: TextControlPlaceholderForegroundFocused;
+}
+TextBoxEdit[class="TextBoxEdit"]:placeholder:disabled{
+    color: TextControlPlaceholderForegroundDisabled;
+}

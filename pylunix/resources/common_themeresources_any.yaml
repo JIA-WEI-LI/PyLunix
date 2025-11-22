@@ -132,11 +132,15 @@ Default:
   SystemControlHighlightListAccentMediumBrush: "#0969b2"
   SystemControlHighlightListAccentHighBrush: "#0470c2"
 
+  TemporaryTextFillColorDisabled: "#FF666666"
+
   # LinearGradientBrush ( can't import in qss)
   LinearGradientBrush: "#12FFFFFF"
   ControlElevationBorderBrush: "#12FFFFFF"
   AccentControlElevationBorderBrush: "#6688DD"
   DesktopAcrylicTransparentBrush: "#2D2D2D"
+  TextControlElevationBorderBrush: "#8B8B8B"
+  TextControlElevationBorderFocusedBrush: "#60CDFF"
 # endregion
 
 # region Light
@@ -270,9 +274,13 @@ Light:
   SystemControlHighlightListAccentMediumBrush: "#61a9e0"
   SystemControlHighlightListAccentHighBrush: "#499ddd"
 
+  TemporaryTextFillColorDisabled: "#FF666666"
+
   # LinearGradientBrush ( can't import in qss)
   LinearGradientBrush: "#12FFFFFF"
   ControlElevationBorderBrush: "#B2B2B2"
   AccentControlElevationBorderBrush: "#6688DD"
   DesktopAcrylicTransparentBrush: "#FAFAFA"
+  TextControlElevationBorderBrush: "#8B8B8B"
+  TextControlElevationBorderFocusedBrush: "#0067C0"
 # endregion

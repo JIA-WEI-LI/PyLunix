@@ -21,6 +21,7 @@ class PyLunixStyleSheet(Enum):
     RADIO_BUTTON = "radio_button", "controls", TypographyStyle.BODY
     REPEAT_BUTTON = "repeat_button", "controls", TypographyStyle.BODY
     TEXT_BLOCK = "text_block", "controls", TypographyStyle.BODY
+    TEXT_BOX = "text_box", "controls", TypographyStyle.BODY
     TOGGLE_BUTTON = "toggle_button", "controls", TypographyStyle.BODY
     TOOL_BUTTON = "tool_button", "controls", TypographyStyle.BODY
     HYPERLINK_BUTTON = "hyperlink_button", "controls", TypographyStyle.BODY
