@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>../win/checkmark.svg</file>
+        <file>../win/clear.svg</file>
     </qresource>
 </RCC>
