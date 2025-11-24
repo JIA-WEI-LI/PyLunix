@@ -115,13 +115,11 @@ class TextBoxEdit(QLineEdit):
         super().setReadOnly(read_only)
         self._updateClearButtonVisibility()
 
-    # FIXME: setTextStyle(font_color) does not work on TextBoxEdit
     def setTextStyle(self,
                      font_style: Optional[TypographyStyle] = None,
                      font_family: Optional[str] = None,
                      font_size: Optional[int] = None,
-                     font_weight: Optional[QFont.Weight] = None,
-                     font_color: Optional[str] = None):
+                     font_weight: Optional[QFont.Weight] = None):
         
         if font_style is not None:
             final_font = PyLnuixTypography.get_font(font_style)
@@ -137,12 +135,6 @@ class TextBoxEdit(QLineEdit):
             final_weight = font_weight if font_weight is not None else final_font.weight()
 
             final_font = QFont(final_family, final_size, final_weight)
-
-        if font_color is not None:
-            palette = self.palette()
-            color = QColor(font_color)
-            palette.setColor(QPalette.Text, color)
-            self.setPalette(palette)
 
         self.setFont(final_font)
 
@@ -172,6 +164,7 @@ class TextBoxEdit(QLineEdit):
         super().focusOutEvent(e)
         self._updateClearButtonVisibility()
 
+# region PaintEvent
     def paintEvent(self, e):
         super().paintEvent(e)
         
@@ -214,6 +207,7 @@ class TextBoxEdit(QLineEdit):
             painter.fillPath(path, QColor(border_disabled_color))
         else:
             painter.fillPath(path, QColor(border_focus_color if self.hasFocus() else border_default_color))
+# endregion
 
 class TextBox(QWidget):
     def __init__(self, text: str="", header: Optional[str]=None, parent = None):
@@ -231,16 +225,57 @@ class TextBox(QWidget):
 
         self.header_label = None
         if header:
-            self.header_label = TextBlock(header, parent=self)
+            self.setHeader(header)
+        
+        self.textBoxEdit = TextBoxEdit(text=text, parent=self) 
+        self.Vlayout.addWidget(self.textBoxEdit)
+
+    def setHeader(self, text:str):
+        if not self.header_label:
+            self.header_label = TextBlock(text, parent=self)
             self.header_label.setProperty("class", "TextBlock")
             self.Vlayout.addWidget(self.header_label)
             PyLunixStyleSheet.TEXT_BLOCK.apply(self.header_label)
-        self.textBoxEdit = TextBoxEdit(text=text, parent=self) 
-        self.Vlayout.addWidget(self.textBoxEdit)
+        else:
+            self.header_label.setText(text)
+
+# region TextBoxEdit Proxy Methods
+    @property
+    def edit(self):
+        return self.textBoxEdit
 
     def text(self) -> str:
         return self.textBoxEdit.text()
     
+    def clear(self):
+        self.textBoxEdit.clear()
+    
+    def setText(self, text: str):
+        self.textBoxEdit.setText(text)
+
+    def setPlaceholderText(self, text: str):
+        self.textBoxEdit.setPlaceholderText(text)
+
+    def setReadOnly(self, read_only: bool):
+        self.textBoxEdit.setReadOnly(read_only)
+
+    def setFocus(self):
+        self.textBoxEdit.setFocus()
+    
     def setHighlightColor(self, background: QColor, text: Optional[QColor]=None):
         self.textBoxEdit.setHighlightColor(background, text)
         self.textBoxEdit.update()
+
+    def setTextStyle(self,
+                     font_style: Optional[TypographyStyle] = None,
+                     font_family: Optional[str] = None,
+                     font_size: Optional[int] = None,
+                     font_weight: Optional[QFont.Weight] = None):
+        self.textBoxEdit.setTextStyle(font_style=font_style,
+                                     font_family=font_family,
+                                     font_size=font_size,
+                                     font_weight=font_weight)
+        
+    def setEchoMode(self, mode: QLineEdit.EchoMode):
+        self.textBoxEdit.setEchoMode(mode)
+# endregion
