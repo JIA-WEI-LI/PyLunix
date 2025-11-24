@@ -7,35 +7,35 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## `0.2.0-dev4` ：2025-11-24
-### 新增
-- 新增兩種基礎元件：`TextBlock`、`TextBox`。
-- 新增一種基礎不公開元件：`TextBoxEdit`。
-- 新增預設圖標檔 `WinIcon.CLEAR`。
+## `0.2.0-alpha.1` ：2025-11-24
+> [!WARNING]
+> ⚠️ 注意：此版本包含非向後兼容的變更 (Breaking Changes)！ 專案結構已完全重構。
+> * 所有引用舊路徑 controls/ 的程式碼必須更新。( 若使用 `from pylunix import *` 則不受影響 )
+> * 導入全新套件 `pylunix-icon-kit 1.0.0` 改善圖標。
 
-## `0.2.0-dev3` ：2025-11-18
-### 重構
+### 新增
+- 新增三種基礎元件：`ListBox`、`TextBlock`、`TextBox`。
+  - 新增一種基礎不公開元件：`TextBoxEdit`。
+- 新增字型類別 `TypographyStyle`、`PyLnuixTypography` 貼近實際文字選擇類別。
+- 新增預設圖標檔： `WinIcon.CHEVRONUP`、`WinIcon.CHEVRONDOWN`、`WinIcon.CLEAR`、`WinIcon.SEARCH`。
+- 新增導入自製套件 `pylunix-icon-kit` ( 版本 `v1.0.0` ) 
+
+### 變更
 - 重新組織專案結構，增強元件層級清晰度
 
-    將 UI 元件分為 Components 和 Views，並優化通用模組命名，以提升專案的可擴展性和可維護性。
+    將 UI 元件分為 `Components` 和 `Views`，並優化通用模組命名，以提升專案的可擴展性和可維護性。
 
     主要變更點:
     - 基礎元件 (Controls) 移動到 components/controls/。
     - 視窗/對話框 (Dialogs) 移動到 views/dialogs/。
-    - 通用模組 (Common) 重命名為 theme/，專注於樣式。
-    - 刪除舊的 controls/ 和 common/ 目錄。"
 
-## `0.2.0-dev2` ：2025-11-18
-### 新增
-- 新增一種基礎元件：`list_box`。
-- 新增字型類別 `TypographyStyle`、`PyLnuixTypography` 貼近實際文字選擇類別。
-### 重構
-- 新增 `PyLunixStyleSheet` 內各元素文字基礎設定。刪除各元件使用 `.qss`、`.yaml` 控制字型字體。
-
-## `0.2.0-dev1` ：2025-11-11
-### 重構
-- 新增自製套件 `pylunix-icon-kit` ( 版本 `v1.0.0` ) 
+### 刪除
+- 刪除舊的 `controls/` 目錄。
+  - 刪除 `BaseButton` 公開 API 轉為內部實現。
+- 刪除各元件使用 `.qss`、`.yaml` 控制字型字體。
 - 刪除原有圖標檔案，改用 `pylunix-icon-kit` 自動生成圖標相關檔案並引用。
+
+---
 
 ## `0.1.1` ： 2025-11-10
 ### 修正
