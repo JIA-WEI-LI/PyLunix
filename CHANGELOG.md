@@ -7,6 +7,12 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `0.2.0-dev4` ：2025-11-24
+### 新增
+- 新增兩種基礎元件：`TextBlock`、`TextBox`。
+- 新增一種基礎不公開元件：`TextBoxEdit`。
+- 新增預設圖標檔 `WinIcon.CLEAR`。
+
 ## `0.2.0-dev3` ：2025-11-18
 ### 重構
 - 重新組織專案結構，增強元件層級清晰度
