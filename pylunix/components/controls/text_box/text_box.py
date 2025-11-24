@@ -44,7 +44,7 @@ class TextBoxButton(TransparentToolButton):
         super().mouseReleaseEvent(e)
 
 class TextBoxEdit(QLineEdit):
-    def __init__(self, text:str="", header: Optional[str]=None, parent=None):
+    def __init__(self, text:str="", parent=None):
         super().__init__(text, parent)
         self.setProperty("class", "TextBoxEdit")
 
@@ -52,7 +52,6 @@ class TextBoxEdit(QLineEdit):
         self.rightButtons = []
         self._isClearButtonEnabled = True
         self._clearButtonAlwaysVisible = False
-        self._header = header
 
         default_palette = self.palette()
         self._default_highlight_bg = default_palette.color(QPalette.Highlight)
@@ -116,6 +115,7 @@ class TextBoxEdit(QLineEdit):
         super().setReadOnly(read_only)
         self._updateClearButtonVisibility()
 
+    # FIXME: setTextStyle(font_color) does not work on TextBoxEdit
     def setTextStyle(self,
                      font_style: Optional[TypographyStyle] = None,
                      font_family: Optional[str] = None,
@@ -216,7 +216,6 @@ class TextBoxEdit(QLineEdit):
             painter.fillPath(path, QColor(border_focus_color if self.hasFocus() else border_default_color))
 
 class TextBox(QWidget):
-    # FIXME: setHighlightColor() does not work on TextBox
     def __init__(self, text: str="", header: Optional[str]=None, parent = None):
         super().__init__(parent)
         self.setProperty("class", "TextBox")
@@ -232,14 +231,16 @@ class TextBox(QWidget):
 
         self.header_label = None
         if header:
-            self.header_label = TextBlock(header)
+            self.header_label = TextBlock(header, parent=self)
             self.header_label.setProperty("class", "TextBlock")
             self.Vlayout.addWidget(self.header_label)
             PyLunixStyleSheet.TEXT_BLOCK.apply(self.header_label)
-        self.textBoxEdit = TextBoxEdit(text=text) 
+        self.textBoxEdit = TextBoxEdit(text=text, parent=self) 
         self.Vlayout.addWidget(self.textBoxEdit)
-
-        PyLunixStyleSheet.TEXT_BOX.apply(self)
 
     def text(self) -> str:
         return self.textBoxEdit.text()
+    
+    def setHighlightColor(self, background: QColor, text: Optional[QColor]=None):
+        self.textBoxEdit.setHighlightColor(background, text)
+        self.textBoxEdit.update()
