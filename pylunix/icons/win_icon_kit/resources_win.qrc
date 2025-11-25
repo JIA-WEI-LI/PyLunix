@@ -3,7 +3,8 @@
         <file>../win/CheckMark.svg</file>
         <file>../win/ChevronDown.svg</file>
         <file>../win/ChevronUp.svg</file>
-        <file>../win/Clear.svg</file>
+        <file>../win/clear.svg</file>
+        <file>../win/RedEye.svg</file>
         <file>../win/Search.svg</file>
     </qresource>
 </RCC>
