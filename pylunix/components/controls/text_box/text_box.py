@@ -1,7 +1,7 @@
 
 from typing import Optional, Union
 from PyQt5.QtWidgets import QAction, QLineEdit, QHBoxLayout, QWidget, QVBoxLayout
-from PyQt5.QtCore import Qt, QRectF
+from PyQt5.QtCore import Qt, QRectF, QEvent
 from PyQt5.QtGui import QPainter, QPainterPath, QColor, QPalette, QFont, QPen
 
 from ..text_block.text_block import TextBlock
@@ -194,15 +194,21 @@ class TextBoxButton(TransparentToolButton):
     def mouseReleaseEvent(self, e):
         self.isPressed = False
         super().mouseReleaseEvent(e)
+# endregion
 
+# region TextBoxEdit
 class TextBoxEdit(_BaseTextBoxEdit):
     _BUTTON_CLASS = TextBoxButton
-    def __init__(self, text: str = "", parent=None):
+    def __init__(self, text: str = "", foreground : Optional[Union[Qt.GlobalColor, QColor, str]] = None, parent=None):
         super().__init__(text, parent)
         self.setProperty("class", "TextBoxEdit")
 
         self._isClearButtonEnabled = True
         self._clearButtonAlwaysVisible = False
+        self._foreground = foreground
+
+        self.isPressed = False
+        self.isHover = False
 
         self.clearButton = TextBoxButton(WinIcon.CLEAR, self)
         self.hBoxLayout.addWidget(self.clearButton, 0, Qt.AlignmentFlag.AlignRight) 
@@ -244,6 +250,43 @@ class TextBoxEdit(_BaseTextBoxEdit):
     def setReadOnly(self, read_only: bool):
         super().setReadOnly(read_only)
         self._updateClearButtonVisibility()
+
+    def setTextColor(self, color: Union[Qt.GlobalColor, QColor, str]):
+        self._foreground = color
+        self._setTextgroundColor()
+
+    def _get_text_color(self) ->str:
+        if not self.isEnabled():
+            name = "TextBlockForegroundDisabled"
+        elif self.isPressed:
+            name = "TextBlockForegroundPressed"
+        elif self.isHover:
+            name = "TextBlockForegroundPointerOver"
+        else:
+            name = "TextBlockForeground"
+        return PyLunixStyleSheet.TEXT_BOX.get_value(name)
+
+    def _setTextgroundColor(self):
+        color = self._get_text_color() if self._foreground is None else self._foreground
+
+        palette = self.palette()
+        if isinstance(color, Qt.GlobalColor):
+            palette.setColor(QPalette.ColorRole.Text, QColor(color))
+        elif isinstance(color, QColor):
+            palette.setColor(QPalette.ColorRole.Text, color)
+        elif isinstance(color, str):
+            palette.setColor(QPalette.ColorRole.Text, QColor(color))
+        self.setPalette(palette)
+
+    def enterEvent(self, e): self.isHover = True; self._setTextgroundColor(); super().enterEvent(e)
+    def leaveEvent(self, e): self.isHover = False; self._setTextgroundColor(); super().leaveEvent(e)
+    def mousePressEvent(self, e): self.isPressed = True; self._setTextgroundColor(); super().mousePressEvent(e)
+    def mouseReleaseEvent(self, e): self.isPressed = False; self._setTextgroundColor(); super().mouseReleaseEvent(e)
+    
+    def changeEvent(self, event: QEvent):
+        if event.type() == QEvent.Type.StyleChange or event.type() == QEvent.Type.PaletteChange:
+            self._setTextgroundColor()
+        super().changeEvent(event)
 # endregion
 
 class TextBox(QWidget):
@@ -319,4 +362,7 @@ class TextBox(QWidget):
         
     def setEchoMode(self, mode: QLineEdit.EchoMode):
         self.textBoxEdit.setEchoMode(mode)
+
+    def setTextColor(self, color: Union[Qt.GlobalColor, QColor, str]):
+        self.textBoxEdit.setTextColor(color)
 # endregion

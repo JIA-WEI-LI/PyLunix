@@ -1,6 +1,6 @@
 TextBoxEdit[class="TextBoxEdit"]{
     background-color: TextControlBackground;
-    color: TextControlForeground;
+    /* color: TextControlForeground; */
     border-color: TextControlBorderBrush;
     border-width: 1px;
     border-style: none;
@@ -13,17 +13,17 @@ TextBoxEdit[class="TextBoxEdit"]{
 TextBoxEdit[class="TextBoxEdit"]:hover{
     background-color: TextControlBackgroundPointerOver;
     border-color: TextControlBorderBrushPointerOver;
-    color: TextControlForegroundPointerOver;
+    /* color: TextControlForegroundPointerOver; */
 }
 TextBoxEdit[class="TextBoxEdit"]:focus{
     background-color: TextControlBackgroundFocused;
     border-color: TextControlBorderBrushFocused;
-    color: TextControlForegroundFocused;
+    /* color: TextControlForegroundFocused; */
 }
 TextBoxEdit[class="TextBoxEdit"]:disabled{
     background-color: TextControlBackgroundDisabled;
     border-color: TextControlBorderBrushDisabled;
-    color: TextControlForegroundDisabled;
+    /* color: TextControlForegroundDisabled; */
 }
 TextBoxEdit[class="TextBoxEdit"]:placeholder{
     color: TextControlPlaceholderForeground;
