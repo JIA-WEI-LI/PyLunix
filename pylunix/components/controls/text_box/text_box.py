@@ -11,6 +11,7 @@ from ....common.typography import TypographyStyle, PyLnuixTypography
 from ....icons.win_icon_kit.win_icon import WinIcon
 from ....utils.style_parser import extract_numbers
 
+# region _BaseTextEdit
 class _BaseTextBoxEdit(QLineEdit):
     _BUTTON_CLASS = None
     def __init__(self, text: str = "", parent=None):
@@ -119,7 +120,6 @@ class _BaseTextBoxEdit(QLineEdit):
         elif hasattr(self, '_updateClearButtonVisibility'):
             self._updateClearButtonVisibility()
 
-    # region PaintEvent
     def paintEvent(self, e):
         super().paintEvent(e)
         
@@ -162,7 +162,9 @@ class _BaseTextBoxEdit(QLineEdit):
             painter.fillPath(path, QColor(border_disabled_color))
         else:
             painter.fillPath(path, QColor(border_focus_color if self.hasFocus() else border_default_color))
+# endregion
 
+# region TextBoxButton
 class TextBoxButton(TransparentToolButton):
     def __init__(self, icon, parent=None):
         super().__init__(icon, parent)
@@ -257,13 +259,13 @@ class TextBoxEdit(_BaseTextBoxEdit):
 
     def _get_text_color(self) ->str:
         if not self.isEnabled():
-            name = "TextBlockForegroundDisabled"
+            name = "TextControlForegroundDisabled"
         elif self.isPressed:
-            name = "TextBlockForegroundPressed"
+            name = "TextControlForegroundFocused"
         elif self.isHover:
-            name = "TextBlockForegroundPointerOver"
+            name = "TextControlForegroundPointerOver"
         else:
-            name = "TextBlockForeground"
+            name = "TextControlForeground"
         return PyLunixStyleSheet.TEXT_BOX.get_value(name)
 
     def _setTextgroundColor(self):
