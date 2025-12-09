@@ -1,0 +1,13 @@
+RichtextBlock[class="RichtextBlock"] {
+    background-color: RichTextBlockBackground;
+    border: none;
+    color: RichTextBlockForeground;
+}
+RichtextBlock[class="RichtextBlock"]:hover {
+    background-color: RichTextBlockBackgroundPointerOver;
+    color: RichTextBlockForegroundPointerOver;
+}
+RichtextBlock[class="RichtextBlock"]:disabled {
+    background-color: RichTextBlockBackgroundDisabled;
+    color: RichTextBlockForegroundDisabled;
+}
