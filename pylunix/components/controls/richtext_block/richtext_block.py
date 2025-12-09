@@ -5,11 +5,11 @@ from PyQt5.QtCore import Qt
    
 from ....common.stylesheet import PyLunixStyleSheet
 
-class RichtextBlock(QTextBrowser):
+class RichTextBlock(QTextBrowser):
     def __init__(self, text: Optional[str]=None, parent=None):
         super().__init__(parent)
         
-        self.setProperty("class", "RichtextBlock")
+        self.setProperty("class", "RichTextBlock")
 
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)

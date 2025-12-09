@@ -5,7 +5,7 @@ from .list_box.list_box import ListBox
 from .password_box.password_box import PasswordBox
 from .radio_button.radio_button import RadioButton
 from .repeat_button.repeat_button import RepeatButton
-from .richtext_block.richtext_block import RichtextBlock
+from .richtext_block.richtext_block import RichTextBlock
 from .text_block.text_block import TextBlock
 from .text_box.text_box import TextBox
 from .toggle_button.toggle_button import ToggleButton, TransparentToggleButton, SegmentedButton

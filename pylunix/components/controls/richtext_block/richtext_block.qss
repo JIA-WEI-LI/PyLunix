@@ -1,13 +1,13 @@
-RichtextBlock[class="RichtextBlock"] {
+RichTextBlock[class="RichTextBlock"] {
     background-color: RichTextBlockBackground;
     border: none;
     color: RichTextBlockForeground;
 }
-RichtextBlock[class="RichtextBlock"]:hover {
+RichTextBlock[class="RichTextBlock"]:hover {
     background-color: RichTextBlockBackgroundPointerOver;
     color: RichTextBlockForegroundPointerOver;
 }
-RichtextBlock[class="RichtextBlock"]:disabled {
+RichTextBlock[class="RichTextBlock"]:disabled {
     background-color: RichTextBlockBackgroundDisabled;
     color: RichTextBlockForegroundDisabled;
 }
