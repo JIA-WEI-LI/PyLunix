@@ -19,6 +19,7 @@ class PyLunixStyleSheet(Enum):
     CHECK_BOX = "check_box", "controls", TypographyStyle.BODY
     HYPERLINK_BUTTON = "hyperlink_button", "controls", TypographyStyle.BODY
     LIST_BOX = "list_box", "controls", TypographyStyle.BODY
+    NUMBER_BOX = "number_box", "controls", TypographyStyle.BODY
     PASSWORD_BOX = "password_box", "controls", TypographyStyle.BODY
     RADIO_BUTTON = "radio_button", "controls", TypographyStyle.BODY
     REPEAT_BUTTON = "repeat_button", "controls", TypographyStyle.BODY
