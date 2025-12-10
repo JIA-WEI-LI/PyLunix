@@ -1,0 +1,11 @@
+NumberBoxPopupIndicatorForeground: "TextFillColorSecondaryBrush"
+NumberBoxPopupBackground: "AcrylicBackgroundFillColorDefaultBrush"
+NumberBoxPopupBorderBrush: "SurfaceStrokeColorFlyoutBrush"
+
+
+# region Thinckness
+NumberBoxSpinButtonBorderThickness: "0px 1px 1px 1px"
+
+NumberBoxTopHeaderMargin: "0px 0px 0px 8px"
+NumberBoxInnerButtonMargin: "0px 4px 4px 4px"
+# endregion 

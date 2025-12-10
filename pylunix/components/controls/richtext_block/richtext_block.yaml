@@ -1,0 +1,13 @@
+# region Color
+# Background
+RichTextBlockBackground: transparent
+RichTextBlockBackgroundPointerOver: transparent
+RichTextBlockBackgroundPressed: transparent
+RichTextBlockBackgroundDisabled: transparent
+
+# Foreground (Text)
+RichTextBlockForeground: TextFillColorPrimaryBrush
+RichTextBlockForegroundPointerOver: TextFillColorPrimaryBrush
+RichTextBlockForegroundPressed: TextFillColorSecondaryBrush
+RichTextBlockForegroundDisabled: TextFillColorDisabledBrush
+# endregion

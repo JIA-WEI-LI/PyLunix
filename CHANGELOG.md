@@ -7,6 +7,23 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `0.2.0-alpha.2` ：2025-12-10
+### 新增
+- 新增三種基礎元件：`NumberBox`、`PasswordBox`、`RichTextBlock`。
+  - 新增一種基礎不公開元件：`NumberBoxEdit`。
+- 新增一種常用方法檔案：`utils/math_utils.py` 用於數學基礎計算。
+
+### 變更
+- 變更 `TextBlock`、`TextBox` 參數值與方法：
+  - 新增參數 `foreground: Optional[Union[Qt.GlobalColor, QColor, str]] = None` 可初始化控制文字顏色。
+  - 新增公開方法 `setTextColor(color: Union[Qt.GlobalColor, QColor, str])` 可設定顏色。
+  - 新增私人方法 `_get_text_color()` 可獲取不同狀態顏色色碼。
+  - 新增私人方法 `_setTextgroundColor()` 可實際修正文字顏色。
+  - 新增各類型狀態複寫。
+  - (`TextBlock`) 新增參數 `is_interactive` 可控制是否受滑鼠事件影響，預設為 `False`
+  - (`TextBox`) 新增訊號傳遞 Signal Forwarding 和 訊號代理 Signal Proxy 方法
+  
+
 ## `0.2.0-alpha.1` ：2025-11-24
 > [!WARNING]
 > ⚠️ 注意：此版本包含非向後兼容的變更 (Breaking Changes)！ 專案結構已完全重構。

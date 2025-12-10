@@ -1,7 +1,7 @@
 from typing import Union, Optional
 from PyQt5.QtWidgets import QLabel, QWidget
 from PyQt5.QtGui import QFont, QPalette, QColor
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QEvent
 
 from ....common.stylesheet import PyLunixStyleSheet
 from ....common.typography import TypographyStyle, PyLnuixTypography
@@ -11,18 +11,29 @@ class TextBlock(QLabel):
                  font_family: Optional[str] = None,
                  font_size: Optional[int] = None,
                  font_weight: Optional[QFont.Weight] = None,
+                 foreground: Optional[Union[Qt.GlobalColor, QColor, str]] = None,
+                 is_interactive: bool = False,
                  parent: QWidget=None):
         super().__init__(text=text, parent=parent)
 
         self._font_family = font_family
         self._font_size = font_size
         self._font_weight = font_weight
+        self._foreground = foreground
+        self._is_interactive = is_interactive
+
+        self.isPressed = False
+        self.isHover = False
 
         self.setProperty("class", "TextBlock")
         self.setMinimumHeight(36)
         self.setText(text if text else "")
-
+        self._setTextgroundColor()
+        
         PyLunixStyleSheet.TEXT_BLOCK.apply(self)
+
+        if foreground is not None:
+            self.setTextColor(foreground)
 
         if (self._font_family is not None or 
             self._font_size is not None or 
@@ -36,6 +47,18 @@ class TextBlock(QLabel):
             font = QFont(final_family, final_size, final_weight)
             self.setFont(font)
 
+    def _get_text_color(self) ->str:
+        if not self.isEnabled():
+            name = "TextBlockForegroundDisabled"
+        elif self.isPressed:
+            name = "TextBlockForegroundPressed"
+        elif self.isHover:
+            name = "TextBlockForegroundPointerOver"
+        else:
+            name = "TextBlockForeground"
+        return PyLunixStyleSheet.TEXT_BLOCK.get_value(name)
+
+# region Text Properties
     def setFont(self, font: QFont):
         return super().setFont(font)
     
@@ -78,3 +101,47 @@ class TextBlock(QLabel):
             palette.setColor(QPalette.Highlight, QColor(highlight_color)) 
             palette.setColor(QPalette.HighlightedText, QColor(Qt.white)) 
             self.setPalette(palette)
+
+    def setTextColor(self, color: Union[Qt.GlobalColor, QColor, str]):
+        self._foreground = color
+        self._setTextgroundColor()
+
+    def _setTextgroundColor(self):
+        color = self._get_text_color() if self._foreground is None else self._foreground
+
+        palette = self.palette()
+        if isinstance(color, Qt.GlobalColor):
+            palette.setColor(QPalette.ColorRole.WindowText, QColor(color))
+        elif isinstance(color, QColor):
+            palette.setColor(QPalette.ColorRole.WindowText, color)
+        elif isinstance(color, str):
+            palette.setColor(QPalette.ColorRole.WindowText, QColor(color))
+        self.setPalette(palette)
+# endregion
+
+# region Event
+    def enterEvent(self, e): 
+        if self._is_interactive:
+            self.isHover = True
+            self._setTextgroundColor()
+        super().enterEvent(e)
+    def leaveEvent(self, e): 
+        if self._is_interactive:
+            self.isHover = False
+            self._setTextgroundColor()
+        super().leaveEvent(e)
+    def mousePressEvent(self, e): 
+        if self._is_interactive:
+            self.isPressed = True
+            self._setTextgroundColor()
+        super().mousePressEvent(e)
+    def mouseReleaseEvent(self, e): 
+        if self._is_interactive:
+            self.isPressed = False
+            self._setTextgroundColor()
+        super().mouseReleaseEvent(e)
+    def changeEvent(self, event: QEvent):
+        if event.type() == QEvent.Type.StyleChange or event.type() == QEvent.Type.PaletteChange:
+            self._setTextgroundColor()
+        super().changeEvent(event)
+# endregion

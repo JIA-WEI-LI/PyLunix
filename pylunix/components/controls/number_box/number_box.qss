@@ -1,0 +1,6 @@
+NumberBoxEdit[class="NumberBoxEdit"]::up-button {
+    width: 0px;
+}
+NumberBoxEdit[class="NumberBoxEdit"]::down-button {
+    width: 0px;
+}

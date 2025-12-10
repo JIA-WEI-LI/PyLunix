@@ -35,5 +35,6 @@ class WinIcon(metaclass=ThemeIconMeta):
     CHECKMARK = IconAccessor(':win/CheckMark.svg')
     CHEVRONDOWN = IconAccessor(':win/ChevronDown.svg')
     CHEVRONUP = IconAccessor(':win/ChevronUp.svg')
-    CLEAR = IconAccessor(':win/Clear.svg')
+    REDEYE = IconAccessor(':win/RedEye.svg')
     SEARCH = IconAccessor(':win/Search.svg')
+    CLEAR = IconAccessor(':win/clear.svg')
