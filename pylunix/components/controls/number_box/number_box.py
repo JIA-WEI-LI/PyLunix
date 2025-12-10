@@ -163,7 +163,7 @@ class NumberBox(QWidget):
 
     def setClearButtonAlwaysVisible(self, always_visible: bool=True):
         self._clearButtonAlwaysVisible = always_visible
-        self.numberBoxEdit._updateClearButtonVisibility()
+        self.numberBoxEdit._update_clear_button_visibility()
 
     def setReadOnly(self, read_only: bool):
         self.numberBoxEdit.setReadOnly(read_only)

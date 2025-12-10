@@ -1,7 +1,7 @@
 
 from typing import Optional, Union
 from PyQt5.QtWidgets import QAction, QLineEdit, QHBoxLayout, QWidget, QVBoxLayout
-from PyQt5.QtCore import Qt, QRectF, QEvent
+from PyQt5.QtCore import Qt, QRectF, QEvent, pyqtSignal
 from PyQt5.QtGui import QPainter, QPainterPath, QColor, QPalette, QFont, QPen
 
 from ..text_block.text_block import TextBlock
@@ -201,10 +201,12 @@ class TextBoxButton(TransparentToolButton):
 # region TextBoxEdit
 class TextBoxEdit(_BaseTextBoxEdit):
     _BUTTON_CLASS = TextBoxButton
+    valueChanged = pyqtSignal(object)
     def __init__(self, text: str = "", foreground : Optional[Union[Qt.GlobalColor, QColor, str]] = None, parent=None):
         super().__init__(text, parent)
         self.setProperty("class", "TextBoxEdit")
 
+        self._internal_value : Optional[str] = None
         self._isClearButtonEnabled = True
         self._clearButtonAlwaysVisible = False
         self._foreground = foreground
@@ -216,14 +218,15 @@ class TextBoxEdit(_BaseTextBoxEdit):
         self.hBoxLayout.addWidget(self.clearButton, 0, Qt.AlignmentFlag.AlignRight) 
         
         self.clearButton.clicked.connect(self.clear)
-        self.textChanged.connect(self._updateClearButtonVisibility)
+        self.textChanged.connect(self._update_text_change_connect)
 
-        self._updateClearButtonVisibility()
-        self._adjustTextMargins()
+        self._update_clear_button_visibility()
+        self._update_internal_value_from_text(text)
+        self._adjust_text_margins()
 
         PyLunixStyleSheet.TEXT_BOX.apply(self)
 
-    def _adjustTextMargins(self):
+    def _adjust_text_margins(self):
         left = len(self.leftButtons) * 30
         right = len(self.rightButtons) * 30
         
@@ -233,29 +236,23 @@ class TextBoxEdit(_BaseTextBoxEdit):
         m = self.textMargins()
         self.setTextMargins(left, m.top(), right, m.bottom())
 
-    def isClearButtonEnabled(self) -> bool:
-        return self._isClearButtonEnabled
+    def _update_text_change_connect(self, text:str):
+        self._update_clear_button_visibility()
+        self._update_internal_value_from_text(text)
 
-    def _updateClearButtonVisibility(self):
+    def _update_clear_button_visibility(self):
         should_be_visible = (
             (self.hasFocus() and 
              bool(self.text() and not self.isReadOnly()) and 
              self.isClearButtonEnabled()) or self._clearButtonAlwaysVisible
         )
         self.clearButton.setVisible(should_be_visible)
-        self._adjustTextMargins()
+        self._adjust_text_margins()
 
-    def setClearButtonAlwaysVisible(self, always_visible: bool=True):
-        self._clearButtonAlwaysVisible = always_visible
-        self._updateClearButtonVisibility()
-
-    def setReadOnly(self, read_only: bool):
-        super().setReadOnly(read_only)
-        self._updateClearButtonVisibility()
-
-    def setTextColor(self, color: Union[Qt.GlobalColor, QColor, str]):
-        self._foreground = color
-        self._setTextgroundColor()
+    def _update_internal_value_from_text(self, text: str):
+        if text != self._internal_value or text is not None:
+            self._internal_value = text
+            self.valueChanged.emit(self._internal_value)
 
     def _get_text_color(self) ->str:
         if not self.isEnabled():
@@ -268,7 +265,7 @@ class TextBoxEdit(_BaseTextBoxEdit):
             name = "TextControlForeground"
         return PyLunixStyleSheet.TEXT_BOX.get_value(name)
 
-    def _setTextgroundColor(self):
+    def _set_textground_color(self):
         color = self._get_text_color() if self._foreground is None else self._foreground
 
         palette = self.palette()
@@ -280,19 +277,35 @@ class TextBoxEdit(_BaseTextBoxEdit):
             palette.setColor(QPalette.ColorRole.Text, QColor(color))
         self.setPalette(palette)
 
-    def enterEvent(self, e): self.isHover = True; self._setTextgroundColor(); super().enterEvent(e)
-    def leaveEvent(self, e): self.isHover = False; self._setTextgroundColor(); super().leaveEvent(e)
-    def mousePressEvent(self, e): self.isPressed = True; self._setTextgroundColor(); super().mousePressEvent(e)
-    def mouseReleaseEvent(self, e): self.isPressed = False; self._setTextgroundColor(); super().mouseReleaseEvent(e)
+    def isClearButtonEnabled(self) -> bool:
+        return self._isClearButtonEnabled
+
+    def setClearButtonAlwaysVisible(self, always_visible: bool=True):
+        self._clearButtonAlwaysVisible = always_visible
+        self._update_clear_button_visibility()
+
+    def setReadOnly(self, read_only: bool):
+        super().setReadOnly(read_only)
+        self._update_clear_button_visibility()
+
+    def setTextColor(self, color: Union[Qt.GlobalColor, QColor, str]):
+        self._foreground = color
+        self._set_textground_color()
+
+    def enterEvent(self, e): self.isHover = True; self._set_textground_color(); super().enterEvent(e)
+    def leaveEvent(self, e): self.isHover = False; self._set_textground_color(); super().leaveEvent(e)
+    def mousePressEvent(self, e): self.isPressed = True; self._set_textground_color(); super().mousePressEvent(e)
+    def mouseReleaseEvent(self, e): self.isPressed = False; self._set_textground_color(); super().mouseReleaseEvent(e)
     
     def changeEvent(self, event: QEvent):
         if event.type() == QEvent.Type.StyleChange or event.type() == QEvent.Type.PaletteChange:
-            self._setTextgroundColor()
+            self._set_textground_color()
         super().changeEvent(event)
 # endregion
 
 #region TextBox
 class TextBox(QWidget):
+    valueChanged = pyqtSignal(object)
     def __init__(self, text: str="", header: Optional[str]=None, parent = None):
         super().__init__(parent)
         self.setProperty("class", "TextBox")
@@ -312,6 +325,7 @@ class TextBox(QWidget):
         
         self.textBoxEdit = TextBoxEdit(text=text, parent=self) 
         self.Vlayout.addWidget(self.textBoxEdit)
+        self.textBoxEdit.valueChanged.connect(self.valueChanged.emit)
 
     def setHeader(self, text:str):
         if not self.header_label:
@@ -339,7 +353,7 @@ class TextBox(QWidget):
 
     def setClearButtonAlwaysVisible(self, always_visible: bool=True):
         self._clearButtonAlwaysVisible = always_visible
-        self.textBoxEdit._updateClearButtonVisibility()
+        self.textBoxEdit._update_clear_button_visibility()
 
     def setReadOnly(self, read_only: bool):
         self.textBoxEdit.setReadOnly(read_only)
