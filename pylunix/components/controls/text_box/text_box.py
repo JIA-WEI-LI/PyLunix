@@ -291,6 +291,7 @@ class TextBoxEdit(_BaseTextBoxEdit):
         super().changeEvent(event)
 # endregion
 
+#region TextBox
 class TextBox(QWidget):
     def __init__(self, text: str="", header: Optional[str]=None, parent = None):
         super().__init__(parent)
@@ -320,8 +321,6 @@ class TextBox(QWidget):
             PyLunixStyleSheet.TEXT_BLOCK.apply(self.header_label)
         else:
             self.header_label.setText(text)
-
-# region TextBoxEdit Proxy Methods
     @property
     def edit(self):
         return self.textBoxEdit

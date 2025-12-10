@@ -12,6 +12,7 @@ class TextBlock(QLabel):
                  font_size: Optional[int] = None,
                  font_weight: Optional[QFont.Weight] = None,
                  foreground: Optional[Union[Qt.GlobalColor, QColor, str]] = None,
+                 is_interactive: bool = False,
                  parent: QWidget=None):
         super().__init__(text=text, parent=parent)
 
@@ -19,6 +20,7 @@ class TextBlock(QLabel):
         self._font_size = font_size
         self._font_weight = font_weight
         self._foreground = foreground
+        self._is_interactive = is_interactive
 
         self.isPressed = False
         self.isHover = False
@@ -27,7 +29,7 @@ class TextBlock(QLabel):
         self.setMinimumHeight(36)
         self.setText(text if text else "")
         self._setTextgroundColor()
-
+        
         PyLunixStyleSheet.TEXT_BLOCK.apply(self)
 
         if foreground is not None:
@@ -118,11 +120,26 @@ class TextBlock(QLabel):
 # endregion
 
 # region Event
-    def enterEvent(self, e): self.isHover = True; self._setTextgroundColor(); super().enterEvent(e)
-    def leaveEvent(self, e): self.isHover = False; self._setTextgroundColor(); super().leaveEvent(e)
-    def mousePressEvent(self, e): self.isPressed = True; self._setTextgroundColor(); super().mousePressEvent(e)
-    def mouseReleaseEvent(self, e): self.isPressed = False; self._setTextgroundColor(); super().mouseReleaseEvent(e)
-    
+    def enterEvent(self, e): 
+        if self._is_interactive:
+            self.isHover = True
+            self._setTextgroundColor()
+        super().enterEvent(e)
+    def leaveEvent(self, e): 
+        if self._is_interactive:
+            self.isHover = False
+            self._setTextgroundColor()
+        super().leaveEvent(e)
+    def mousePressEvent(self, e): 
+        if self._is_interactive:
+            self.isPressed = True
+            self._setTextgroundColor()
+        super().mousePressEvent(e)
+    def mouseReleaseEvent(self, e): 
+        if self._is_interactive:
+            self.isPressed = False
+            self._setTextgroundColor()
+        super().mouseReleaseEvent(e)
     def changeEvent(self, event: QEvent):
         if event.type() == QEvent.Type.StyleChange or event.type() == QEvent.Type.PaletteChange:
             self._setTextgroundColor()
