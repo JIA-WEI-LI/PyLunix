@@ -60,6 +60,7 @@ class BaseButton(QPushButton):
                 returns a QIcon based on a color string.
 
         .. code-block:: python
+        
             button.setIcon(WinIcon.CHECKMARK)
         """
         if callable(icon):

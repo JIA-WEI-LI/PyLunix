@@ -13,8 +13,20 @@ from ....utils.style_parser import extract_numbers
 
 # region _BaseTextEdit
 class _BaseTextBoxEdit(QLineEdit):
+    """
+    A base line edit class supporting custom action buttons and specialized styling.
+
+    This class manages the placement of 'Leading' and 'Trailing' buttons within 
+    the text field and automatically adjusts text margins to prevent overlap.
+
+    Attributes:
+        _BUTTON_CLASS (class): The button class used for actions (must be defined by subclasses).
+        leftButtons (list): List of buttons positioned at the start of the edit.
+        rightButtons (list): List of buttons positioned at the end of the edit.
+    """
     _BUTTON_CLASS = None
     def __init__(self, text: str = "", parent=None):
+        """Initialize the base text box with layout and palette setup."""
         super().__init__(text, parent)
 
         if self._BUTTON_CLASS is None:
@@ -37,6 +49,13 @@ class _BaseTextBoxEdit(QLineEdit):
         self.hBoxLayout.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
 
     def addAction(self, action: QAction, position: QLineEdit.ActionPosition = QLineEdit.ActionPosition.TrailingPosition):
+        """
+        Add a clickable action button inside the text box.
+
+        Args:
+            action (QAction): The action containing icon and trigger logic.
+            position (ActionPosition): Leading (left) or Trailing (right).
+        """
         button = self._BUTTON_CLASS(action.icon(), self) 
         button.setAction(action)
 
@@ -59,6 +78,7 @@ class _BaseTextBoxEdit(QLineEdit):
         self._adjustTextMargins()
 
     def _adjustTextMargins(self):
+        """Updates text margins based on the number of visible internal buttons."""
         left = len(self.leftButtons) * 30
         right = len(self.rightButtons) * 30
         
@@ -70,6 +90,7 @@ class _BaseTextBoxEdit(QLineEdit):
                      font_family: Optional[str] = None,
                      font_size: Optional[int] = None,
                      font_weight: Optional[QFont.Weight] = None):
+        """Apply typography styles or individual font properties."""
         if font_style is not None:
             final_font = PyLnuixTypography.get_font(font_style)
         else:
@@ -88,6 +109,7 @@ class _BaseTextBoxEdit(QLineEdit):
         self.setFont(final_font)
 
     def setHighlightColor(self, background: QColor, text: Optional[QColor] = None):
+        """Set custom background and text colors for selected text."""
         palette = self.palette()
         if background is None:
             bg_color = self._default_highlight_bg
@@ -121,6 +143,7 @@ class _BaseTextBoxEdit(QLineEdit):
             self._updateClearButtonVisibility()
 
     def paintEvent(self, e):
+        """Custom paint event to draw the specialized bottom-border and focus indicators."""
         super().paintEvent(e)
         
         painter = QPainter(self)
@@ -166,6 +189,10 @@ class _BaseTextBoxEdit(QLineEdit):
 
 # region TextBoxButton
 class TextBoxButton(TransparentToolButton):
+    """
+    A tool button specialized for use inside a TextBox.
+    Syncs its state (Enabled, Visible, Checked) with a QAction.
+    """
     def __init__(self, icon, parent=None):
         super().__init__(icon, parent)
         self.isPressed = False
@@ -176,6 +203,7 @@ class TextBoxButton(TransparentToolButton):
         return self._action
 
     def setAction(self, action: QAction):
+        """Link this button to a QAction."""
         self._action = action
         self._onActionChanged()
         self.clicked.connect(action.trigger)
@@ -183,6 +211,7 @@ class TextBoxButton(TransparentToolButton):
         action.changed.connect(self._onActionChanged)
 
     def _onActionChanged(self):
+        """Updates the button's UI based on action properties."""
         action = self.action()
         self.setEnabled(action.isEnabled())
         self.setVisible(action.isVisible())
@@ -200,6 +229,12 @@ class TextBoxButton(TransparentToolButton):
 
 # region TextBoxEdit
 class TextBoxEdit(_BaseTextBoxEdit):
+    """
+    The main editable component of a TextBox, featuring an optional clear button.
+
+    Signals:
+        valueChanged (object): Emitted whenever the text content changes.
+    """
     _BUTTON_CLASS = TextBoxButton
     valueChanged = pyqtSignal(object)
     def __init__(self, text: str = "", foreground : Optional[Union[Qt.GlobalColor, QColor, str]] = None, parent=None):
@@ -241,6 +276,7 @@ class TextBoxEdit(_BaseTextBoxEdit):
         self._update_internal_value_from_text(text)
 
     def _update_clear_button_visibility(self):
+        """Logic to show/hide the clear button based on text presence and focus."""
         should_be_visible = (
             (self.hasFocus() and 
              bool(self.text() and not self.isReadOnly()) and 
@@ -305,8 +341,25 @@ class TextBoxEdit(_BaseTextBoxEdit):
 
 #region TextBox
 class TextBox(QWidget):
+    """
+    The primary high-level input component featuring an optional header label.
+
+    This is the main entry point for developers. It combines the TextBoxEdit 
+    and a TextBlock into a cohesive vertical layout, suitable for forms.
+
+    Signals:
+        valueChanged (object): Proxied signal from the internal edit component.
+    """
     valueChanged = pyqtSignal(object)
     def __init__(self, text: str="", header: Optional[str]=None, parent = None):
+        """
+        Initialize the TextBox component.
+
+        Args:
+            text (str): The initial text content of the input field.
+            header (str, optional): Descriptive text to display above the input box.
+            parent (QWidget, optional): Parent widget of this component.
+        """
         super().__init__(parent)
         self.setProperty("class", "TextBox")
 
@@ -328,6 +381,13 @@ class TextBox(QWidget):
         self.textBoxEdit.valueChanged.connect(self.valueChanged.emit)
 
     def setHeader(self, text:str):
+        """
+        Sets or updates the descriptive label text displayed above the input field.
+
+        Args:
+            text (str): The header content. If the header label does not exist, 
+                        a new TextBlock is initialized and styled.
+        """
         if not self.header_label:
             self.header_label = TextBlock(text, parent=self)
             self.header_label.setProperty("class", "TextBlock")
@@ -337,31 +397,81 @@ class TextBox(QWidget):
             self.header_label.setText(text)
     @property
     def edit(self):
+        """
+        Returns the internal TextBoxEdit instance.
+        
+        Use this property when direct access to low-level QLineEdit operations 
+        (like validators or input masks) is required.
+        """
         return self.textBoxEdit
 
     def text(self) -> str:
+        """
+        Returns the current text content of the input field.
+
+        Returns:
+            str: The current string content.
+        """
         return self.textBoxEdit.text()
     
     def clear(self):
+        """
+        Clears all text from the input field and hides the clear button if applicable.
+        """
         self.textBoxEdit.clear()
     
     def setText(self, text: str):
+        """
+        Sets the text content of the input field.
+
+        Args:
+            text (str): The text string to be displayed.
+        """
         self.textBoxEdit.setText(text)
 
     def setPlaceholderText(self, text: str):
+        """
+        Sets the placeholder text shown when the input field is empty.
+
+        Args:
+            text (str): The ghost text used to guide user input.
+        """
         self.textBoxEdit.setPlaceholderText(text)
 
     def setClearButtonAlwaysVisible(self, always_visible: bool=True):
+        """
+        Determines whether the clear button should remain visible regardless of focus.
+
+        Args:
+            always_visible (bool): If True, the clear button persists even when 
+                                   the field is empty or loses focus.
+        """
         self._clearButtonAlwaysVisible = always_visible
         self.textBoxEdit._update_clear_button_visibility()
 
     def setReadOnly(self, read_only: bool):
+        """
+        Sets the input field to read-only mode.
+
+        Args:
+            read_only (bool): If True, the user cannot modify the text, and 
+                              the clear button is disabled.
+        """
         self.textBoxEdit.setReadOnly(read_only)
 
     def setFocus(self):
+        """ Moves the keyboard input focus to the internal edit field. """
         self.textBoxEdit.setFocus()
     
     def setHighlightColor(self, background: QColor, text: Optional[QColor]=None):
+        """
+        Sets the background and text colors for selected text.
+
+        Args:
+            background (QColor): The color of the selection highlight.
+            text (QColor, optional): The color of the selected text. Defaults to 
+                                     the theme's high-contrast color if None.
+        """
         self.textBoxEdit.setHighlightColor(background, text)
         self.textBoxEdit.update()
 
@@ -370,14 +480,35 @@ class TextBox(QWidget):
                      font_family: Optional[str] = None,
                      font_size: Optional[int] = None,
                      font_weight: Optional[QFont.Weight] = None):
+        """
+        Applies typography styles or individual font property overrides to the input field.
+
+        Args:
+            font_style (TypographyStyle, optional): A predefined PyLunix typography style.
+            font_family (str, optional): The name of the font family.
+            font_size (int, optional): The pixel size of the font.
+            font_weight (QFont.Weight, optional): The weight/thickness of the font.
+        """
         self.textBoxEdit.setTextStyle(font_style=font_style,
                                      font_family=font_family,
                                      font_size=font_size,
                                      font_weight=font_weight)
         
     def setEchoMode(self, mode: QLineEdit.EchoMode):
+        """
+        Sets the visual echo mode of the text field (e.g., for password input).
+
+        Args:
+            mode (QLineEdit.EchoMode): Can be QLineEdit.Normal, QLineEdit.Password, etc.
+        """
         self.textBoxEdit.setEchoMode(mode)
 
     def setTextColor(self, color: Union[Qt.GlobalColor, QColor, str]):
+        """
+        Manually overrides the text color of the input field.
+
+        Args:
+            color (Union): Accepts Qt GlobalColors, QColor objects, or hex strings (e.g., "#FFFFFF").
+        """
         self.textBoxEdit.setTextColor(color)
 # endregion
