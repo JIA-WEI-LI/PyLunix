@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, magicoldeier19
+# This file is distributed under the same license as the PyLunix package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PyLunix \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-24 14:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/reference_manual/text/doc_number_box.rst:2
+msgid "NumberBox [Experimental]"
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:10
+msgid ""
+"**Experimental Feature**: The ``NumberBox`` component is currently in "
+"active development. API breaking changes may occur in future releases "
+"without prior notice."
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:13
+msgid "Under Development"
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:16
+msgid ""
+"The following features are currently under development and may not "
+"function as expected:"
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:18
+msgid ""
+"**Value Adjustment Buttons**: Interactive buttons (e.g., +/-) for "
+"incrementally adjusting numeric values."
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:19
+msgid ""
+"**Decimal Formatting**: Automatic conversion and rounding of decimal "
+"places after numeric input."
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:21
+msgid "Example Code"
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:23
+msgid "example.py"
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst:28
+msgid "API Reference"
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox:1
+msgid "Bases: :py:class:`~PyQt5.QtWidgets.QWidget`"
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox:1
+msgid "A composite widget combining a label (header) and a numeric input field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox:3
+msgid ""
+"This is the primary container for themed numeric inputs in PyLunix. It "
+"manages the layout between an optional header text and the NumberBoxEdit."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox:6
+msgid "Signals:"
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox:7
+msgid "valueChanged (object): Emitted when the input value changes."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.__init__:1
+msgid "Initialize the NumberBox."
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst
+msgid "Parameters"
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.__init__:4
+msgid "Default text for the edit field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.__init__:7
+msgid "Title text displayed above the edit field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.__init__:10
+msgid "Allow math evaluation in the edit field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.__init__:13
+msgid "Parent widget."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.clear:1
+msgid "Clear all text in the input field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.edit:1
+msgid "Access to the internal NumberBoxEdit instance."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.number_box.number_box.NumberBox.setAcceptsExpression:1
+msgid "Configure whether the input field evaluates mathematical expressions."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.setFocus:1
+msgid "Set focus to the input field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.setHeader:1
+msgid "Set or update the header label text above the input."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.setHeader:4
+msgid "The header text."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.number_box.number_box.NumberBox.setHighlightColor:1
+msgid "Set the selection/highlight color for the input field."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.number_box.number_box.NumberBox.setPlaceholderText:1
+msgid "Set the placeholder text of the input field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.setReadOnly:1
+msgid "Enable or disable read-only mode."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.setText:1
+msgid "Set the text of the input field."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.number_box.number_box.NumberBox.setTextColor:1
+msgid "Set the foreground text color."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.number_box.number_box.NumberBox.setTextStyle:1
+msgid "Apply typography and font styles to the input field."
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.text:1
+msgid "Retrieve the raw text from the input field."
+msgstr ""
+
+#: ../../source/reference_manual/text/doc_number_box.rst
+msgid "Return type"
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.text:4
+msgid ":sphinx_autodoc_typehints_type:`\\:py\\:class\\:\\`str\\``"
+msgstr ""
+
+#: of pylunix.components.controls.number_box.number_box.NumberBox.value:1
+msgid "Retrieve the current float value from the edit field."
+msgstr ""
+

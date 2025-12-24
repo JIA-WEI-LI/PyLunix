@@ -6,7 +6,25 @@ from PyQt5.QtCore import QSize, QRectF, Qt
 from ....common.stylesheet import PyLunixStyleSheet
 
 class ToolButton(QToolButton):
+    """
+    A versatile tool button supporting dynamic icon coloring and custom layout.
+
+    Unlike standard QToolButton, this class manually renders its icon and text 
+    within the `paintEvent` to ensure precise centering and theme-aware 
+    foreground color updates based on interaction states (Hover, Pressed, Disabled).
+
+    Attributes:
+        isPressed (bool): Tracking variable for mouse press state.
+        isHover (bool): Tracking variable for mouse hover state.
+    """
     def __init__(self, icon: QIcon, parent: QWidget = None):
+        """
+        Initialize the ToolButton.
+
+        Args:
+            icon (QIcon): The initial icon to display.
+            parent (QWidget, optional): Parent widget of this button.
+        """
         super().__init__(parent=parent)
         self.isPressed = False
         self.isHover = False
@@ -21,6 +39,13 @@ class ToolButton(QToolButton):
         PyLunixStyleSheet.TOOL_BUTTON.apply(self)
 
     def setIcon(self, icon: Union[QIcon, Callable]):
+        """
+        Sets the button's icon. Supports both static QIcon and dynamic Callables.
+
+        Args:
+            icon (Union[QIcon, Callable]): A QIcon object or a function that 
+                                            returns a QIcon based on a color string.
+        """
         if callable(icon):
             self.setIconSource(icon)
         else:
@@ -29,10 +54,23 @@ class ToolButton(QToolButton):
             self._icon = icon
 
     def setIconSource(self, icon_accessor: Callable[[str], QIcon]):
+        """
+        Binds a dynamic icon source to the button.
+
+        Args:
+            icon_accessor (Callable): A function that takes a color hex string 
+                                      and returns a rendered QIcon.
+        """
         self._icon_source = icon_accessor
         self.updateIcon()
 
     def adjustToSquare(self, padding: int = 8):
+        """
+        Resizes the button to a square aspect ratio based on its icon size.
+
+        Args:
+            padding (int): Extra space to add to the largest icon dimension.
+        """
         size = self.iconSize()
         side = max(size.width(), size.height()) + padding
         self.setFixedSize(side, side)
@@ -49,6 +87,10 @@ class ToolButton(QToolButton):
         return PyLunixStyleSheet.TOOL_BUTTON.get_value(name)
 
     def updateIcon(self):
+        """
+        Forces an icon refresh by requesting a new icon from the icon source 
+        using the current state's theme color.
+        """
         if hasattr(self, "_icon_source") and callable(self._icon_source):
             try:
                 color = self._get_icon_color()
@@ -69,6 +111,14 @@ class ToolButton(QToolButton):
         self.updateIcon()
 
     def paintEvent(self, event):
+        """
+        Custom paint routine that renders icons and text with precise alignment.
+
+        This method bypasses standard QToolButton rendering to provide:
+        1. Theme-aware SVG/Icon coloring.
+        2. Consistent spacing between icons and text.
+        3. Opacity adjustments for Pressed and Disabled states.
+        """
         original_text = self.text()
         super().setText("")
         original_icon = self.icon()
@@ -129,6 +179,10 @@ class ToolButton(QToolButton):
         painter.end()
 
 class PrimaryToolButton(ToolButton):
+    """
+    A ToolButton that uses the system's Accent/Primary color theme for its foreground.
+    Typically used for the most important action in a toolbar.
+    """
     def __init__(self, icon: QIcon = None, parent: QWidget = None):
         super().__init__(icon=icon, parent=parent)
         self.setProperty("class", "PrimaryToolButton")
@@ -145,6 +199,11 @@ class PrimaryToolButton(ToolButton):
         return PyLunixStyleSheet.TOOL_BUTTON.get_value(name)
     
 class ToggleToolButton(ToolButton):
+    """
+    A checkable tool button that toggles between two icons based on its state.
+
+    Ideal for "Play/Pause", "Mute/Unmute", or "Expand/Collapse" behaviors.
+    """
     def __init__(self, icon: QIcon = None, parent: QWidget = None):
         super().__init__(icon=icon, parent=parent)
         self._icon_on = None
@@ -159,6 +218,13 @@ class ToggleToolButton(ToolButton):
         self.toggled.connect(self._on_toggle_state_changed)
 
     def setToggleIcons(self, icon_on: Union[QIcon, Callable], icon_off: Union[QIcon, Callable]):
+        """
+        Sets different icons for the Checked and Unchecked states.
+
+        Args:
+            icon_on (Union[QIcon, Callable]): Icon used when `isChecked()` is True.
+            icon_off (Union[QIcon, Callable]): Icon used when `isChecked()` is False.
+        """
         self._icon_on = icon_on
         self._icon_off = icon_off
         self._applyToggle()
@@ -201,11 +267,19 @@ class ToggleToolButton(ToolButton):
         self.updateIcon()
 
 class TransparentToolButton(ToolButton):
+    """
+    A ToolButton with a transparent background in its idle state.
+    Commonly used in modern "Ghost" or "Flat" UI designs.
+    """
     def __init__(self, icon: QIcon = None, parent: QWidget = None):
         super().__init__(icon=icon, parent=parent)
         self.setProperty("class", "TransparentToolButton")
 
 class TransparentToggleToolButton(ToggleToolButton):
+    """
+    A TransparentToolButton that also supports toggle states and dual icons.
+    """
+    pass
     def __init__(self, icon: QIcon = None, parent: QWidget = None):
         super().__init__(icon=icon, parent=parent)
         self.setProperty("class", "TransparentToggleToolButton")

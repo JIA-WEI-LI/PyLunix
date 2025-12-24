@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pylunix"
-version = "0.2.0-alpha.2"
+version = "0.2.0-alpha.3"
 description = "Add your description here"
 authors = [
     { name="Magicsoldier19", email="magicsoldier19@gmail.com" }
@@ -16,6 +16,23 @@ dependencies = [
     "pylunix-icon-kit>=1.0.0",
     "pyqt5",
     "pyyaml>=6.0.3",
+    # "furo>=2024.8.6",
+    # "sphinx>=7.1.2",
+    # "sphinx-autodoc-typehints>=2.0.1",
+    # "sphinx-inline-tabs>=2023.4.21",
+    # "sphinx-intl>=2.2.0",
+    # "sphinx-design>=0.5.0",
+    # "sphinx-copybutton>=0.5.2",
+]
+[project.optional-dependencies]
+docs = [
+    "furo>=2024.8.6",
+    "sphinx>=7.1.2",
+    "sphinx-autodoc-typehints>=2.0.1",
+    "sphinx-inline-tabs>=2023.4.21",
+    "sphinx-intl>=2.2.0",
+    "sphinx-design>=0.5.0",
+    "sphinx-copybutton>=0.5.2",
 ]
 
 [project.urls]

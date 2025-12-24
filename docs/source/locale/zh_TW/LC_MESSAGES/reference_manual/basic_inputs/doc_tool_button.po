@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, magicoldeier19
+# This file is distributed under the same license as the PyLunix package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PyLunix \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-24 14:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:2
+msgid "ToolButton"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:4
+msgid ""
+"A collection of specialized tool buttons featuring dynamic SVG coloring, "
+"state-aware opacity, and flexible icon-text alignment."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:13
+msgid ""
+"The base tool button class. It manually renders icons and text to ensure "
+"theme-consistent coloring and precise centering."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:15
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:45
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:66
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:90
+msgid "Example Code"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:17
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:47
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:68
+msgid "example.py"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:23
+msgid "**Visual Contrast & Transparency**"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:25
+msgid ""
+"The **Default** theme utilizes white color combined with **alpha channels"
+" (transparency)** to achieve its visual effects."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:27
+msgid ""
+"**Dark Background (Recommended):** On a dark background (e.g., "
+"``#222222``), the semi-transparent layers blend to create distinct gray "
+"scales and hover highlights."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:28
+msgid ""
+"**Light Background Warning:** If used on a light or white background, "
+"these effects will become invisible."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:30
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:52
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:73
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:97
+msgid "API Reference"
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton:1
+msgid "Bases: :py:class:`~PyQt5.QtWidgets.QToolButton`"
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton:1
+msgid ""
+"A versatile tool button supporting dynamic icon coloring and custom "
+"layout."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton:3
+msgid ""
+"Unlike standard QToolButton, this class manually renders its icon and "
+"text within the `paintEvent` to ensure precise centering and theme-aware "
+"foreground color updates based on interaction states (Hover, Pressed, "
+"Disabled)."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton:9
+msgid "Tracking variable for mouse press state."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton
+msgid "type"
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton:11
+#: pylunix.components.controls.tool_button.tool_button.ToolButton:17
+msgid "bool"
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton:15
+msgid "Tracking variable for mouse hover state."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.PrimaryToolButton.__init__:1
+#: pylunix.components.controls.tool_button.tool_button.ToggleToolButton.__init__:1
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.__init__:1
+#: pylunix.components.controls.tool_button.tool_button.TransparentToggleToolButton.__init__:1
+#: pylunix.components.controls.tool_button.tool_button.TransparentToolButton.__init__:1
+msgid "Initialize the ToolButton."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst
+msgid "Parameters"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.PrimaryToolButton.__init__:4
+#: pylunix.components.controls.tool_button.tool_button.ToggleToolButton.__init__:4
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.__init__:4
+#: pylunix.components.controls.tool_button.tool_button.TransparentToggleToolButton.__init__:4
+#: pylunix.components.controls.tool_button.tool_button.TransparentToolButton.__init__:4
+msgid "The initial icon to display."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.PrimaryToolButton.__init__:7
+#: pylunix.components.controls.tool_button.tool_button.ToggleToolButton.__init__:7
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.__init__:7
+#: pylunix.components.controls.tool_button.tool_button.TransparentToggleToolButton.__init__:7
+#: pylunix.components.controls.tool_button.tool_button.TransparentToolButton.__init__:7
+msgid "Parent widget of this button."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.adjustToSquare:1
+msgid "Resizes the button to a square aspect ratio based on its icon size."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.adjustToSquare:4
+msgid "Extra space to add to the largest icon dimension."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton.setIcon:1
+msgid "Sets the button's icon. Supports both static QIcon and dynamic Callables."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToolButton.setIcon:4
+msgid "A QIcon object or a function that returns a QIcon based on a color string."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.setIconSource:1
+msgid "Binds a dynamic icon source to the button."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.setIconSource:4
+msgid "A function that takes a color hex string and returns a rendered QIcon."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToolButton.updateIcon:1
+msgid ""
+"Forces an icon refresh by requesting a new icon from the icon source "
+"using the current state's theme color."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst
+msgid "PrimaryToolButton"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:43
+msgid ""
+"A tool button that uses the system's **Accent/Primary** color for its "
+"foreground (icon and text), making it stand out as a key action."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.PrimaryToolButton:1
+#: pylunix.components.controls.tool_button.tool_button.ToggleToolButton:1
+#: pylunix.components.controls.tool_button.tool_button.TransparentToolButton:1
+msgid ""
+"Bases: "
+":py:class:`~pylunix.components.controls.tool_button.tool_button.ToolButton`"
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.PrimaryToolButton:1
+msgid ""
+"A ToolButton that uses the system's Accent/Primary color theme for its "
+"foreground. Typically used for the most important action in a toolbar."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst
+msgid "ToggleToolButton"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:64
+msgid ""
+"A checkable tool button that switches between **On** and **Off** states, "
+"supporting independent icons for each state."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToggleToolButton:1
+msgid "A checkable tool button that toggles between two icons based on its state."
+msgstr ""
+
+#: of pylunix.components.controls.tool_button.tool_button.ToggleToolButton:3
+msgid ""
+"Ideal for \"Play/Pause\", \"Mute/Unmute\", or \"Expand/Collapse\" "
+"behaviors."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToggleToolButton.setToggleIcons:1
+msgid "Sets different icons for the Checked and Unchecked states."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToggleToolButton.setToggleIcons:4
+msgid "Icon used when `isChecked()` is True."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.ToggleToolButton.setToggleIcons:7
+msgid "Icon used when `isChecked()` is False."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst
+msgid "Transparent Variants"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:85
+msgid ""
+"Lightweight variants with transparent backgrounds in idle state, "
+"including both standard and toggle versions."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:87
+msgid "**TransparentToolButton**: Standard behavior with ghost styling."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_tool_button.rst:88
+msgid "**TransparentToggleToolButton**: Toggle behavior with ghost styling."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.TransparentToolButton:1
+msgid ""
+"A ToolButton with a transparent background in its idle state. Commonly "
+"used in modern \"Ghost\" or \"Flat\" UI designs."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.TransparentToggleToolButton:1
+msgid ""
+"Bases: "
+":py:class:`~pylunix.components.controls.tool_button.tool_button.ToggleToolButton`"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.tool_button.tool_button.TransparentToggleToolButton:1
+msgid "A TransparentToolButton that also supports toggle states and dual icons."
+msgstr ""
+

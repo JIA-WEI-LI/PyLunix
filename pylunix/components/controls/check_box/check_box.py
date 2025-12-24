@@ -7,7 +7,29 @@ from ....common.stylesheet import PyLunixStyleSheet
 from ....icons import WinIcon
 
 class CheckBox(QCheckBox):
+    """
+    Themed CheckBox with support for dynamic icon coloring and custom indicator rendering.
+
+    This class extends QCheckBox to provide a modern look and feel consistent with 
+    the PyLunix theme. It supports dynamic re-coloring of the checkbox glyphs 
+    (Checkmark/Indeterminate) and an optional secondary icon.
+
+    Attributes:
+        isPressed (bool): Tracks whether the mouse button is currently pressed.
+        isHover (bool): Tracks whether the mouse pointer is over the widget.
+        _icon_source (Optional[Callable[[str], QIcon]]): A callback that takes a color 
+            hex string and returns a QIcon for the secondary icon.
+    """
     def __init__(self, text: str = "", icon: QIcon = None, parent: QWidget = None):
+        """
+        Initialize the CheckBox.
+
+        Args:
+            text (str): The text displayed next to the checkbox. Defaults to "".
+            icon (Union[QIcon, Callable], optional): An optional icon to display. 
+                Can be a static QIcon or a dynamic callable. Defaults to None.
+            parent (QWidget, optional): The parent widget. Defaults to None.
+        """
         super().__init__(text, parent)
         self.isPressed = False
         self.isHover = False
@@ -23,6 +45,16 @@ class CheckBox(QCheckBox):
         PyLunixStyleSheet.CHECK_BOX.apply(self)
 
     def setIcon(self, icon: Union[QIcon, Callable]):
+        """
+        Set the checkbox's secondary icon.
+
+        If a callable is provided, the icon will update its color based on the 
+        checkbox's state.
+
+        Args:
+            icon (Union[QIcon, Callable]): A QIcon instance or a function that 
+                returns a QIcon based on a color string.
+        """
         if callable(icon):
             self.setIconSource(icon)
         else:
@@ -31,10 +63,23 @@ class CheckBox(QCheckBox):
             self._icon = icon
 
     def setIconSource(self, icon_accessor):
+        """
+        Assign a dynamic icon source callback for the secondary icon.
+
+        Args:
+            icon_accessor (Callable): A function accepting a color string 
+                and returning a QIcon.
+        """
         self._icon_source = icon_accessor
         self.updateIcon()
 
     def _get_icon_color(self) -> str:
+        """
+        Determine the secondary icon color based on the current state and check state.
+
+        Returns:
+            str: The color value hex string from the stylesheet.
+        """
         if not self.isEnabled():
             name = "CheckBoxForegroundCheckedDisabled" if self.isChecked() else "CheckBoxForegroundUncheckedDisabled"
         elif self.isPressed:
@@ -46,6 +91,12 @@ class CheckBox(QCheckBox):
         return PyLunixStyleSheet.CHECK_BOX.get_value(name)
     
     def _get_indicator_icon_color(self) -> str:
+        """
+        Retrieve the color for the checkmark/glyph inside the checkbox indicator.
+
+        Returns:
+            str: The glyph color value hex string from the stylesheet.
+        """
         if not self.isEnabled():
             name = "CheckBoxCheckGlyphForegroundCheckedDisabled" if self.isChecked() else "CheckBoxCheckGlyphForegroundUncheckedDisabled"
         elif self.isPressed:
@@ -57,6 +108,9 @@ class CheckBox(QCheckBox):
         return PyLunixStyleSheet.CHECK_BOX.get_value(name)
 
     def updateIcon(self):
+        """
+        Refresh the secondary icon based on the current state color.
+        """
         if hasattr(self, "_icon_source") and callable(self._icon_source):
             try:
                 color = self._get_icon_color()
@@ -69,24 +123,37 @@ class CheckBox(QCheckBox):
                 print(f"[CheckBox] Failed to update icon: {e}")
 
     def enterEvent(self, event):
+        """Handle mouse enter event to trigger hover styles."""
         self.isHover = True
         super().enterEvent(event)
         self.update()
 
     def leaveEvent(self, event):
+        """Handle mouse leave event to clear hover styles."""
         self.isHover = False
         super().leaveEvent(event)
         self.update()
 
     def mousePressEvent(self, event):
+        """Handle mouse press event to trigger pressed styles."""
         self.isPressed = True
         super().mousePressEvent(event)
 
     def mouseReleaseEvent(self, event):
+        """Handle mouse release event to clear pressed styles."""
         self.isPressed = False
         super().mouseReleaseEvent(event)
 
     def paintEvent(self, e):
+        """
+        Custom paint engine for the CheckBox.
+
+        Manually renders the checkbox indicator (background, border, and glyph) 
+        and the standard label to allow for precise theme integration.
+
+        Args:
+            e (QPaintEvent): The paint event provided by Qt.
+        """
         painter = QPainter(self)
         painter.setRenderHints(QPainter.RenderHint.Antialiasing | QPainter.RenderHint.SmoothPixmapTransform)
 
