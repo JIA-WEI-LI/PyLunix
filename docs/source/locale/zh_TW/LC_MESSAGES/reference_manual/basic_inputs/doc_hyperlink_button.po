@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, magicoldeier19
+# This file is distributed under the same license as the PyLunix package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PyLunix \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-24 14:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/reference_manual/basic_inputs/doc_hyperlink_button.rst:2
+msgid "HyperlinkButton"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_hyperlink_button.rst:6
+msgid "Example Code"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_hyperlink_button.rst:8
+msgid "example.py"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_hyperlink_button.rst:13
+msgid "API Reference"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:1
+msgid "Bases: :py:class:`~PyQt5.QtWidgets.QPushButton`"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:1
+msgid "A button designed to act as a web link with advanced interaction support."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:3
+msgid ""
+"This class provides a hyperlink-style button that can open URLs in the "
+"default web browser. It supports dynamic icon coloring, customized mouse "
+"interactions (Control+Click and Middle-Click), and automatic URL "
+"prefixing."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:9
+msgid "Tracks whether the mouse button is currently pressed."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton
+msgid "type"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:11
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:17
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:23
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:29
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:35
+msgid "bool"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:15
+msgid "Tracks whether the mouse pointer is over the button."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:21
+msgid "If True, ensures the URL starts with 'http://'."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:27
+msgid "Enables opening the link specifically with Ctrl+Left Click."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:33
+msgid "Enables opening the link using the middle mouse button."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:39
+msgid "Cache for storing themed icons for performance."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:41
+msgid "Dict[str, QIcon]"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:45
+msgid "A callback function that generates a QIcon based on a color string."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton:48
+msgid "Optional[Callable[[str], QIcon]]"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:1
+msgid "Initialize the HyperlinkButton."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_hyperlink_button.rst
+msgid "Parameters"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:4
+msgid "The text displayed on the button. Defaults to \"\"."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:7
+msgid ""
+"The initial icon. Can be a static QIcon or a callable for dynamic "
+"coloring. Defaults to None."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:11
+msgid "The parent widget. Defaults to None."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:13
+msgid "The target URL to open. Passed via kwargs."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:15
+msgid "Auto-add 'http://' if missing. Defaults to False."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:17
+msgid "Enable Ctrl+Left Click handling. Defaults to False."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.__init__:19
+msgid "Enable Middle Click handling. Defaults to False."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.enterEvent:1
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.leaveEvent:1
+msgid "Update hover state and icon."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.eventFilter:1
+msgid "Filter events to prevent standard behavior on specific modifiers."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.mousePressEvent:1
+msgid "Update pressed state and icon."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.mouseReleaseEvent:1
+msgid "Handle the mouse release event to trigger URL opening logic."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.mouseReleaseEvent:3
+msgid "Supports left click, middle click (if enabled), and modified clicks."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.setIcon:1
+msgid "Set the button's icon."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.setIcon:4
+msgid ""
+"A QIcon instance or a function that returns a QIcon based on a color "
+"string."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.setIconSource:1
+msgid "Assign a dynamic icon source callback for theme-aware icons."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.setIconSource:4
+msgid "A function accepting a color string and returning a QIcon."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.setUrl:1
+msgid "Update the target URL and tooltip."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.setUrl:4
+msgid "The new destination URL."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.showEvent:1
+msgid "Ensure icon is updated when the widget becomes visible."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.sizeHint:1
+msgid "Calculate the recommended size for the button, ensuring height for icons."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.updateIcon:1
+msgid "Refresh the icon based on the current state's foreground color."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.url:1
+msgid "Retrieve the current target URL."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_hyperlink_button.rst
+msgid "Returns"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.hyperlink_button.hyperlink_button.HyperlinkButton.url:3
+msgid "The target URL."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_hyperlink_button.rst
+msgid "Return type"
+msgstr ""
+

@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, magicoldeier19
+# This file is distributed under the same license as the PyLunix package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PyLunix \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-24 14:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/reference_manual/basic_inputs/doc_repeat_button.rst:2
+msgid "RepeatButton"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_repeat_button.rst:6
+msgid "Example Code"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_repeat_button.rst:8
+msgid "example.py"
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_repeat_button.rst:13
+msgid "API Reference"
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:1
+msgid "Bases: :py:class:`~pylunix.components.controls.button.button.BaseButton`"
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:1
+msgid "A button that continues to trigger the click event while being pressed."
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:3
+msgid ""
+"This component mimics the behavior of keyboard keys or spin box arrows, "
+"where holding the button down triggers an initial action, waits for a "
+"short delay, and then repeatedly triggers the action at a fixed interval."
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:9
+msgid "The initial delay in milliseconds before repeating starts."
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton
+msgid "type"
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:11
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton:17
+msgid "int"
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:15
+msgid "The interval in milliseconds between consecutive clicks."
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:21
+msgid "Internal timer managing the repetition logic."
+msgstr ""
+
+#: of pylunix.components.controls.repeat_button.repeat_button.RepeatButton:23
+msgid "QTimer"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.__init__:1
+msgid "Initialize the RepeatButton."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_repeat_button.rst
+msgid "Parameters"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.__init__:4
+msgid "The text displayed on the button."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.__init__:7
+msgid "The icon displayed on the button."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.__init__:10
+msgid "The parent widget."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.__init__:12
+msgid "Initial wait time (ms). Defaults to 400."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.__init__:14
+msgid "Repetition speed (ms). Defaults to 100."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.repeatDelay:1
+msgid "Return the current repeat delay in milliseconds."
+msgstr ""
+
+#: ../../source/reference_manual/basic_inputs/doc_repeat_button.rst
+msgid "Return type"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.repeatDelay:4
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.repeatInterval:4
+msgid ":sphinx_autodoc_typehints_type:`\\:py\\:class\\:\\`int\\``"
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.repeatInterval:1
+msgid "Return the current repeat interval in milliseconds."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.setRepeatDelay:1
+msgid "Set the delay before the first repetition occurs."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.setRepeatDelay:4
+msgid "Delay in milliseconds."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.setRepeatInterval:1
+msgid "Set the interval between repeated click events."
+msgstr ""
+
+#: of
+#: pylunix.components.controls.repeat_button.repeat_button.RepeatButton.setRepeatInterval:4
+msgid "Interval in milliseconds."
+msgstr ""
+

@@ -7,6 +7,14 @@
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## `0.2.0-alpha.3` ：2025-12-24
+### 新增
+- 元件新增 docstring
+- 建立基本介紹網站
+
+### 變更
+- 變更 `NumberBox` 修改為輸入非數字型態則按下 Return 後會顯示前一次有效輸入。
+
 ## `0.2.0-alpha.2` ：2025-12-10
 ### 新增
 - 新增三種基礎元件：`NumberBox`、`PasswordBox`、`RichTextBlock`。

@@ -1,6 +1,6 @@
 # PyLunix
 
-[![Version](https://img.shields.io/badge/version-0.2.0--alpha.2-yellow)](#)
+[![Version](https://img.shields.io/badge/version-0.2.0--alpha.3-yellow)](#)
 [![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](#)
 [![PyQt5](https://img.shields.io/badge/PyQt5-5.15.11-blue)](#)
 
@@ -17,7 +17,7 @@ PyLunix is designed to provide developers with a lightweight and easily integrat
 
 * **WinUI 3 Design Adoption:** The core design strictly adheres to the visual specifications of WinUI 3 (Windows App SDK), providing a familiar, modern interface aesthetic.
 * **PyQt5 Implementation:** Built upon the powerful, cross-platform capabilities of PyQt5, ensuring stable operation of widgets across various operating systems.
-* **Core Component Set (`v0.2.0-alpha.2`):** The library now provides a foundational set of **ten core interactive widgets** including `Buttons`, `Check Boxes`, `Toggle Buttons` ... , ready for immediate use.
+* **Core Component Set (`v0.2.0-alpha.3`):** The library now provides a foundational set of **ten core interactive widgets** including `Buttons`, `Check Boxes`, `Toggle Buttons` ... , ready for immediate use.
 * **Simple API Access:** All components are easily accessible through a direct import from the top-level package (`from pylunix import *`), simplifying integration.
 * **Custom and Extensible:** All components are custom-implemented, allowing developers deep customization and extension to meet specific application requirements.
 ---
@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
 This section tracks the implementation progress of core UI components based on the WinUI 3 design specification.
 
-### Implemented Widgets ( `0.2.0-alpha.2` Focus )
+### Implemented Widgets ( `0.2.0-alpha.3` Focus )
 > [!NOTE]
 > No selection box indicates that the API is not publicly available.
 * **Basic Inputs**
