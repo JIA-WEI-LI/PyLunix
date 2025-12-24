@@ -105,9 +105,7 @@ class NumberBoxEdit(TextBoxEdit):
         self._update_internal_value_from_text(text)
 
         self.textChanged.connect(self._on_text_changed)
-
-        if self._accepts_expression: 
-            self.returnPressed.connect(self._simple_calculation)
+        self.returnPressed.connect(self._returnPressed_handler)
 
     @property
     def value(self) -> Optional[float]:
@@ -127,7 +125,7 @@ class NumberBoxEdit(TextBoxEdit):
         except ValueError:
             new_value = None
         
-        if new_value != self._internal_value or new_value is not None:
+        if new_value is not None and new_value != self._internal_value:
             self._internal_value = new_value 
             self.valueChanged.emit(self._internal_value)
 
@@ -150,21 +148,30 @@ class NumberBoxEdit(TextBoxEdit):
             expression = input_str.replace('^', '**')
             result = safe_eval_math(expression)
             self._internal_value = result
-            # Formats result to avoid excessive trailing zeros
             formatted_result = f"{result:.8f}".rstrip('0').rstrip('.')
             self.setText(formatted_result)
         except (ValueError, TypeError):
-            self._internal_value = None
-            self.setText(input_str)
+            self.setText(str(self._internal_value))
         except Exception:
-            self.setText(input_str)
+            self.setText(str(self._internal_value))
 
     def setAcceptsExpression(self, accepts_expression: bool = False):
         """Enable or disable math expression evaluation."""
         self._accepts_expression = accepts_expression
+        self.returnPressed.connect(self._returnPressed_handler)
 
-        if self._accepts_expression: 
-            self.returnPressed.connect(self._simple_calculation)
+    def _returnPressed_handler(self):
+        if self._accepts_expression:
+            self._simple_calculation()
+        current_text = self.text().strip()
+        try:
+            new_value = float(current_text)
+            self._update_internal_value_from_text(new_value)
+        except ValueError:
+            if self._internal_value is not None:
+                self.setText(str(self._internal_value))
+            else:
+                self.clear()
 # endregion
 
 # region NumberBox
