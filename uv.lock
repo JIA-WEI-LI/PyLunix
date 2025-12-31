@@ -594,7 +594,7 @@ wheels = [
 
 [[package]]
 name = "pylunix"
-version = "0.0.0"
+version = "0.0.1.dev0"
 source = { editable = "." }
 dependencies = [
     { name = "pylunix-icon-kit" },
