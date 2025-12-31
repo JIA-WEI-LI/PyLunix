@@ -5,8 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.0-dev1+0d00358] - 2025-12-31
+## [`0.1.0-dev1+<new-hash>`] - 2025-12-31
+### Added
+- **Toggle Component Family**:
+    - Added `ToggleButton` with independent icon/text support for checked/unchecked states.
+    - Added `SubtleToggleButton` (formerly `TransparentToggleButton`) for toolbar-style interactions.
+### Changed
+- **StateColorResolver (factory.py)**:
+    - **Enhanced Logic**: Refactored the resolver to support complex state combinations, including "Checked" states for toggleable components.
+    - **Consistency**: Implemented a standardized string-matching pattern (`{ComponentName}{Attribute}{State}`) to align with WinUI 3 naming conventions.
+    - **Decoupling**: Removed hardcoded state-to-color logic from individual widgets, centralizing color resolution in the factory.
+- **Component Renaming**:
+    - Renamed `TransparentToggleButton` to `SubtleToggleButton` to maintain design system consistency across the framework.
 
+## [`0.1.0-dev1+f3e5af8`] - 2025-12-31
+### Added
+- **Hyperlink Component (Issue #7)**:
+    - Implementation of `HyperlinkButton` with seamless icon integration.
+    - Fixed icon initialization sequence to prevent rendering crashes.
+
+## [`0.1.0-dev1+0d00358`] - 2025-12-31
 ### Added
 - **Button Component Family (Issue #6)**: 
     - Full implementation of `PushButton`, `PrimaryButton`, and `SubtleButton`.
@@ -14,9 +32,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Automated Dev-Ops Tools**:
     - Created `generate_screenshots.py` for automated visual documentation.
     - Integrated Git commit hashes into `__version__`.
-
-## [0.1.0-dev1+<new-hash>] - 2025-12-31
-### Added
-- **Hyperlink Component (Issue #7)**:
-    - Implementation of `HyperlinkButton` with seamless icon integration.
-    - Fixed icon initialization sequence to prevent rendering crashes.
