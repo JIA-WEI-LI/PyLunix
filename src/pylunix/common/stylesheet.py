@@ -15,7 +15,7 @@ class PyLunixStyleSheet(Enum):
         obj._typography_style = typography_style
         return obj
     
-    # EXAMPLE: BUTTON = "button", "controls", TypographyStyle.BODY
+    BUTTON = "button", "controls", TypographyStyle.BODY
 
     def apply(self, widget, register=True):
         widget.setObjectName(self.value)
