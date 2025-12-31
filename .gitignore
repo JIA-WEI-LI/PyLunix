@@ -11,6 +11,7 @@ wheels/
 
 # vscode setting
 .vscode
+scripts
 
 # test output
 .test
