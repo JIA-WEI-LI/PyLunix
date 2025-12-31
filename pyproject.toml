@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylunix"
+version = "0.0.1.dev0"
+    description = "A modern WinUI 3 styled component library for PyQt5."
+authors = [
+    { name="Magicsoldier19", email="magicsoldier19@gmail.com" }
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+dependencies = [
+    "pylunix-icon-kit>=1.0.0",
+    "pyqt5",
+    "pyyaml>=6.0.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/JIA-WEI-LI/pylunix"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pylunix*"]
+
+[tool.uv]
+dev-dependencies = [
+    "furo>=2024.8.6",
+    "sphinx>=7.1.2",
+    "sphinx-autodoc-typehints>=2.0.1",
+    "sphinx-inline-tabs>=2023.4.21",
+    "sphinx-intl>=2.2.0",
+    "sphinx-design>=0.5.0",
+    "sphinx-copybutton>=0.5.2",
+]
+required-environments = [
+    "sys_platform == 'linux'",
+    "sys_platform == 'win32'",
+]
