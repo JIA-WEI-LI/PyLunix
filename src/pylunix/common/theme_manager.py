@@ -6,7 +6,7 @@ import threading
 
 from .widget_registry import WidgetRegistry
 from ..config.paths import COMMON_THEME_YAML, component_yaml_path
-from ..utils.yaml_util import YAMLProcessor
+from ..utils.yaml_utils import YAMLProcessor
 from ..utils.qss_utils import QSSProcessor
 
 logger = logging.getLogger("ThemeManager")
