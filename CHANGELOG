@@ -1,0 +1,22 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.1.0-dev1+0d00358] - 2025-12-31
+
+### Added
+- **Button Component Family (Issue #6)**: 
+    - Full implementation of `PushButton`, `PrimaryButton`, and `SubtleButton`.
+    - Integrated WinUI 3 visual styles and dynamic interaction states.
+- **Automated Dev-Ops Tools**:
+    - Created `generate_screenshots.py` for automated visual documentation.
+    - Integrated Git commit hashes into `__version__`.
+
+## [0.1.0-dev1+<new-hash>] - 2025-12-31
+### Added
+- **Hyperlink Component (Issue #7)**:
+    - Implementation of `HyperlinkButton` with seamless icon integration.
+    - Fixed icon initialization sequence to prevent rendering crashes.

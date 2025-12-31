@@ -16,6 +16,7 @@ class PyLunixStyleSheet(Enum):
         return obj
     
     BUTTON = "button", "controls", TypographyStyle.BODY
+    HYPERLINK_BUTTON = "hyperlink_button", "controls", TypographyStyle.BODY
 
     def apply(self, widget, register=True):
         widget.setObjectName(self.value)
