@@ -5,3 +5,4 @@ Reference Manual
    :maxdepth: 2
 
    basic_inputs/index
+   text/index

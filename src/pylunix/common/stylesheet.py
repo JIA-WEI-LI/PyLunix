@@ -17,6 +17,7 @@ class PyLunixStyleSheet(Enum):
     
     BUTTON = "button", "controls", TypographyStyle.BODY
     HYPERLINK_BUTTON = "hyperlink_button", "controls", TypographyStyle.BODY
+    RICHTEXT_BLOCK = "richtext_block", "controls", TypographyStyle.BODY
     REPEAT_BUTTON = "repeat_button", "controls", TypographyStyle.BODY
     TOGGLE_BUTTON = "toggle_button", "controls", TypographyStyle.BODY
 
@@ -30,7 +31,7 @@ class PyLunixStyleSheet(Enum):
         try:
             widget.setFont(PyLnuixTypography.get_font(self._typography_style))
         except Exception as e:
-            print("[stylesheet.py] : " + e)
+            print(f"[stylesheet.py] : {e}")
 
     def get_value(self, name:str, components_dir:str=None):
         components_dir = self._components_dir if components_dir is None else components_dir
