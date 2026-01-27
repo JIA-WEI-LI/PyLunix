@@ -5,3 +5,4 @@ Text
    :maxdepth: 1
 
    doc_richtext_block
+   doc_text_block

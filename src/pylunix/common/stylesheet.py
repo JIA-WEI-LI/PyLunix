@@ -19,6 +19,7 @@ class PyLunixStyleSheet(Enum):
     HYPERLINK_BUTTON = "hyperlink_button", "controls", TypographyStyle.BODY
     RICHTEXT_BLOCK = "richtext_block", "controls", TypographyStyle.BODY
     REPEAT_BUTTON = "repeat_button", "controls", TypographyStyle.BODY
+    TEXT_BLOCK = "text_block", "controls", TypographyStyle.BODY
     TOGGLE_BUTTON = "toggle_button", "controls", TypographyStyle.BODY
 
     def apply(self, widget, register=True):

@@ -35,3 +35,4 @@ if __name__ == "__main__":
     capture_widget_image(app, ScreenshotSubtleToggleButton, "basic_inputs", "SubtleToggleButton.png")
     capture_widget_image(app, ScreenshotRepeatButton, "basic_inputs", "RepeatButton.png")
     capture_widget_image(app, ScreenshotRichTextBlock, "text", "RichTextBlock.png")
+    capture_widget_image(app, ScreenshotTextBlock, "text", "TextBlock.png")

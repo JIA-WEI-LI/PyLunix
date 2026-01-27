@@ -1,0 +1,14 @@
+/* Note: Using QSS to set text color will override the parameter settings. See the documentation for details. */
+
+TextBlock[class="TextBlock"]{
+    background-color: TextBlockBackground;
+}
+TextBlock[class="TextBlock"]:hover{
+    background-color: TextBlockBackgroundPointerOver;
+}
+TextBlock[class="TextBlock"]:pressed{
+    background-color: TextBlockBackgroundPressed;
+}
+TextBlock[class="TextBlock"]:disabled{
+    background-color: TextBlockBackgroundDisabled;
+}

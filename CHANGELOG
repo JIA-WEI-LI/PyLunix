@@ -5,9 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [`0.1.0-dev1+<new-hash>`] - 2025-12-31
+## ['0.1.0-dev1'+<new-hash>] - 2026-01-27
 ### Added
-- **Toggle Component Family**:
+- **Foundational Typography (Issue #11)**:
+    - Implementation of `TextBlock` with full support for WinUI 3 Typography Ramp.
+    - Added semantic font styling via `setFontStyle` (supporting Title, Body, Caption, etc.).
+    - Implemented state-aware foreground coloring for interactive text elements.
+
+## [`0.1.0-dev1+3484348f`] - 2026-01-21
+### Added
+- **Modern Text Container (Issue #10)**:
+    - Implementation of `RichTextBlock`, a specialized component for HTML and rich text rendering.
+    - Added **Adaptive Geometry Engine** that automatically synchronizes widget height with document content via `contentsChanged` signal.
+    - Integrated **Smart Cursor Switching** logic that toggles between `ArrowCursor` and `IBeamCursor` based on text interaction flags.
+- **Typography & Interaction**:
+    - **Line-Height Control**: Added support for both proportional and fixed line heights via `setLineHeight`.
+    - **Native Link Handling**: Integrated `QDesktopServices` to delegate hyperlink clicks to the system's default browser.
+    - **Selection Aesthetics**: Added `setTextSelection` to allow programmatic customization of the `Highlight` palette color to match theme accent colors.
+
+## [`0.1.0-dev1+22a6800f`] - 2026-01-01
+### Added
+- **Incremental Control Component (Issue #9)**:
+    - Implementation of `RepeatButton`, providing specialized behavior for continuous action triggering (e.g., spin boxes, scrolling).
+    - Introduced a **Dual-Phase Timing Engine** using `QTimer` to replace native `setAutoRepeat`, offering finer control over `repeatDelay` and `repeatInterval`.
+
+## [`0.1.0-dev1+295de8d1`] - 2025-12-31
+### Added
+- **Toggle Component Family (Issue #8)**:
     - Added `ToggleButton` with independent icon/text support for checked/unchecked states.
     - Added `SubtleToggleButton` (formerly `TransparentToggleButton`) for toolbar-style interactions.
 ### Changed
