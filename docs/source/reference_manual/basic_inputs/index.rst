@@ -8,3 +8,4 @@ Basic Inputs
    doc_hyperlink_button
    doc_repeat_button
    doc_toggle_button
+   doc_tool_button

@@ -36,3 +36,8 @@ if __name__ == "__main__":
     capture_widget_image(app, ScreenshotRepeatButton, "basic_inputs", "RepeatButton.png")
     capture_widget_image(app, ScreenshotRichTextBlock, "text", "RichTextBlock.png")
     capture_widget_image(app, ScreenshotTextBlock, "text", "TextBlock.png")
+    capture_widget_image(app, ScreenshotToolButton, "basic_inputs", "ToolButton.png")
+    capture_widget_image(app, ScreenshotPrimaryToolButton, "basic_inputs", "PrimaryToolButton.png")
+    capture_widget_image(app, ScreenshotSubtleToolButton, "basic_inputs", "SubtleToolButton.png")
+    capture_widget_image(app, ScreenshotToggleToolButton, "basic_inputs", "ToggleToolButton.png")
+    capture_widget_image(app, ScreenshotSubtleToggleToolButton, "basic_inputs", "SubtleToggleToolButton.png")

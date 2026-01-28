@@ -5,7 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## ['0.1.0-dev1'+5748da7d] - 2026-01-27
+## [`0.1.0-dev1+TOOL_HASH`] - 2026-01-28
+### Added
+- **CommandBar Components (Issue #12)**:
+    - **ToolButton Suite**: Introduced a specialized button family optimized for toolbar environments, including `ToolButton`, `PrimaryToolButton`, and `SubtleToolButton`.
+    - **Binary State Management**: Implemented `ToggleToolButton` featuring `setToggleIcons` for seamless icon transitions (e.g., Play/Pause) based on the widget's checked state.
+    - **State-Aware Iconography**: Integrated with the refactored `StateColorResolver` to dynamically swap between `ToolButton` and `AccentToolButton` theme tokens.
+- **Advanced Rendering Engine**:
+    - **Precision Geometry**: Custom `paintEvent` implementation ensuring a fixed 6px icon-text gap and perfect centering, bypassing native Qt rendering limitations.
+    - **Visual Fidelity**: Added support for manual opacity blending (36% for Disabled, 78% for Pressed) and smooth SVG scaling via `SmoothPixmapTransform`.
+    - **RTL Readiness**: Built-in support for Right-to-Left layout directions in the custom paint pipeline.
+
+## [`0.1.0-dev1'+9f596fd3`] - 2026-01-28
+### Changed
+- **Core Style Engine (Issue #13)**:
+    - **Refactored `StateColorResolver`**: Simplified the state-matching logic by removing legacy "Checked" string concatenation, aligning with WinUI 3's semantic naming conventions.
+    - **Decoupled Component Prefixes**: Transitioned from hardcoded suffixes to a dynamic prefix-based resolution, allowing for cleaner theme token mapping.
+
+## [`0.1.0-dev1+5748da7d`] - 2026-01-27
 ### Added
 - **Foundational Typography (Issue #11)**:
     - Implementation of `TextBlock` with full support for WinUI 3 Typography Ramp.
