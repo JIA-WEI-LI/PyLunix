@@ -33,6 +33,7 @@ class ToggleButton(BaseButton):
         self._text_off = None
         self._icon_on = None
         self._icon_off = None
+        self._component_name = "ToggleButton"
         
         self._postInit()
         self.setProperty("class", "ToggleButton")
@@ -85,7 +86,8 @@ class ToggleButton(BaseButton):
         
         This handles complex state combinations (e.g., Checked + Hover).
         """
-        return StateColorResolver.resolve( self._component_name, "Foreground", self, theme_type="TOGGLE_BUTTON")
+        prefix = "ForegroundChecked" if self.isChecked() else "Foreground"
+        return StateColorResolver.resolve(self._component_name, prefix, self, theme_type="TOGGLE_BUTTON")
         
     def _applyToggle(self):
         """Updates the text and icon based on the current checked state."""

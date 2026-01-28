@@ -21,6 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Core Style Engine (Issue #13)**:
     - **Refactored `StateColorResolver`**: Simplified the state-matching logic by removing legacy "Checked" string concatenation, aligning with WinUI 3's semantic naming conventions.
     - **Decoupled Component Prefixes**: Transitioned from hardcoded suffixes to a dynamic prefix-based resolution, allowing for cleaner theme token mapping.
+- ### Fixed
+- **Component Regression (Issue #13)**:
+    - Corrected the `_get_icon_color` logic in `ToggleButton` to synchronize with the new prefix-based resolution pattern, restoring proper Accent color application when checked.
 
 ## [`0.1.0-dev1+5748da7d`] - 2026-01-27
 ### Added
