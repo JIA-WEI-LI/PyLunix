@@ -5,4 +5,5 @@ Reference Manual
    :maxdepth: 2
 
    basic_inputs/index
+   dialogs_and_flyouts/index
    text/index

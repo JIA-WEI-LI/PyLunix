@@ -1,5 +1,6 @@
 from .button.button import PushButton, PrimaryButton, SubtleButton
 from .hyperlink_button.hyperlink_button import HyperlinkButton
+from .popup.popup import Popup
 from .repeat_button.repeat_button import RepeatButton
 from .richtext_block.richtext_block import RichTextBlock
 from .text_block.text_block import TextBlock
@@ -9,9 +10,10 @@ from .tool_button.tool_button import ToolButton, PrimaryToolButton, ToggleToolBu
 
 __all__ = [
     "HyperlinkButton",
-    "PushButton",
+    "Popup",
     "PrimaryButton",
     "PrimaryToolButton",
+    "PushButton",
     "RichTextBlock",
     "RepeatButton",
     "SegmentedButton",

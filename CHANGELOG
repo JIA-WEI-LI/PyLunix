@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [`0.1.0-dev1+<new-hash>`] - 2026-01-29
+## [`0.1.0-dev1+<new-hash>`] - 2026-01-30
+### Added
+- **Popup Primitive (Issue #16)**:
+    - **Transient Window Logic**: Introduced `Popup` as the foundational base class for all top-level transient UI elements (Flyouts, Tooltips, Menus).
+    - **Light-Dismiss Implementation**: Integrated `Qt.Popup` window flags to support automatic closure on focus loss, mimicking WinUI 3's dismiss behavior.
+    - **Screen-Aware Positioning**: Developed a robust `calculate_position` engine that supports dynamic placement (`Top`, `Bottom`, `Left`, `Right`) with built-in collision detection for screen boundaries.
+    - **Visual Transparency**: Enabled `WA_TranslucentBackground` at the base level to facilitate future Fluent Design visuals like rounded corners and drop shadows.
+
+## [`0.1.0-dev1+54f29d4`] - 2026-01-29
 ### Added
 - **Input Component Family (Issue #15)**:
     - **Modular Architecture**: Introduced a three-tier system: `_BaseTextBoxEdit` (logic abstraction), `TextBoxEdit` (refined input field), and `TextBox` (high-level form widget with header support).
