@@ -16,6 +16,7 @@ class PyLunixStyleSheet(Enum):
         return obj
     
     BUTTON = "button", "controls", TypographyStyle.BODY
+    FLYOUT = "flyout", "controls", TypographyStyle.BODY
     HYPERLINK_BUTTON = "hyperlink_button", "controls", TypographyStyle.BODY
     RICHTEXT_BLOCK = "richtext_block", "controls", TypographyStyle.BODY
     REPEAT_BUTTON = "repeat_button", "controls", TypographyStyle.BODY

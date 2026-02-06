@@ -1,4 +1,5 @@
 from .button.button import PushButton, PrimaryButton, SubtleButton
+from .flyout.flyout import Flyout
 from .hyperlink_button.hyperlink_button import HyperlinkButton
 from .popup.popup import Popup
 from .repeat_button.repeat_button import RepeatButton
@@ -9,6 +10,7 @@ from .toggle_button.toggle_button import ToggleButton, SubtleToggleButton, Segme
 from .tool_button.tool_button import ToolButton, PrimaryToolButton, ToggleToolButton, SubtleToolButton, SubtleToggleToolButton
 
 __all__ = [
+    "Flyout",
     "HyperlinkButton",
     "Popup",
     "PrimaryButton",

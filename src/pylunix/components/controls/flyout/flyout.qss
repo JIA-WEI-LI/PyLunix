@@ -1,0 +1,8 @@
+Flyout[class="Flyout"] {
+    background-color: transparent;
+}
+QFrame#FlyoutContainer {
+    background-color: FlyoutPresenterBackground;
+    border: 1px solid FlyoutBorderThemeBrush;
+    border-radius: 8px;
+}

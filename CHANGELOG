@@ -5,7 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [`0.1.0-dev1+<new-hash>`] - 2026-01-30
+## [`0.1.0-dev1+<new-hash>`] - 2026-02-06
+### Added
+- **Flyout Component (Issue #17)**:
+    - **Contextual Container**: Introduced `Flyout`, a styled transient window for hosting arbitrary content layouts.
+    - **Motion Graphics**: Implemented slide-in animations using `QPropertyAnimation` with Quintic easing for a premium feel.
+    - **Shadow & Depth**: Integrated `QGraphicsDropShadowEffect` to provide visual elevation consistent with Fluent Design.
+    - **Flexible Content Management**: Added logic to dynamically populate the Flyout from external layouts with recursive cleanup of stale widgets.
+    - **Anchor-Based Positioning**: Enhanced `show_at` logic to support directional offsets and automatic coordinate calculation relative to parent widgets.
+
+## [`0.1.0-dev1+4686add`] - 2026-01-30
 ### Added
 - **Popup Primitive (Issue #16)**:
     - **Transient Window Logic**: Introduced `Popup` as the foundational base class for all top-level transient UI elements (Flyouts, Tooltips, Menus).
